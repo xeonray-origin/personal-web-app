@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Topbar } from '@/components'
 
 import '@/styles/globals.css'
 
@@ -32,6 +33,7 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
+					<Topbar />
 					{children}
 				</ThemeProvider>
 			</body>
