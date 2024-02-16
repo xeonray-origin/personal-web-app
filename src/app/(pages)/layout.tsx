@@ -36,7 +36,9 @@ export default function RootLayout({
 				>
 					<div className='flex bg-primary'>
 						<Sidebar />
-						<div className=' w-[100vw] bg-primary pr-10'>{children}</div>
+						<div className=' ml-[15rem] w-[100vw] bg-primary pr-10'>
+							{children}
+						</div>
 					</div>
 				</ThemeProvider>
 			</body>

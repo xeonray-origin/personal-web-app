@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Save } from 'lucide-react'
 
 import { Avatar, Button, Typography } from './ui'
@@ -5,11 +6,11 @@ import { Avatar, Button, Typography } from './ui'
 const Header = () => {
 	return (
 		<div className='flex h-[16rem] flex-col'>
-			<div className=' bg-blue-gray-500 z-10 h-[12rem] w-full' />
+			<div className=' bg-blue-gray-500 z-10 h-[12rem] w-full bg-[url(/header.svg)]' />
 			<div className='absolute z-30 mt-[8.5rem] flex grow basis-full flex-row pl-2'>
 				<Avatar
 					className='!size-[8rem] border-2 border-white'
-					src='https://docs.material-tailwind.com/img/face-2.jpg'
+					src='/photo.jpeg'
 					alt='avatar'
 					placeholder={''}
 				/>
