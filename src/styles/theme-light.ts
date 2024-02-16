@@ -1,5 +1,4 @@
-import withMT from '@material-tailwind/react/utils/withMT'
-
+//In progress
 export const lightTheme = {
 	theme: {
 		colors: {
