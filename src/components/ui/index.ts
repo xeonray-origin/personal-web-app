@@ -1,5 +1,10 @@
-export * from './card'
-export * from './button'
-export * from './typography'
-export * from './dropdown-menu'
-export * from './avatar'
+'use client'
+
+import {
+	Avatar,
+	Button,
+	ThemeProvider,
+	Typography,
+} from '@material-tailwind/react'
+
+export { ThemeProvider, Button, Avatar, Typography }
