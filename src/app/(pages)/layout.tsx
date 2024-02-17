@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html className={font.variable} lang='en' suppressHydrationWarning>
-			<body className={cn('min-h-screen bg-background font-sans antialiased')}>
+			<body className={cn('min-h-screen bg-background antialiased')}>
 				<ThemeProvider
 					value={{
 						theme: lightTheme,
@@ -36,7 +36,7 @@ export default function RootLayout({
 				>
 					<div className='flex bg-primary'>
 						<Sidebar />
-						<div className=' ml-[15rem] w-[100vw] bg-primary pr-10'>
+						<div className=' w-[100vw] bg-primary md:ml-[15rem] md:pr-10'>
 							{children}
 						</div>
 					</div>

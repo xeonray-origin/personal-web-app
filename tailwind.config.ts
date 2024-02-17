@@ -26,6 +26,7 @@ module.exports = withMT({
 			'none': '0 0 rgb(0, 0 / 0, 0)',
 		},
 		screens: {
+			'xs': '320px',
 			'sm': '540px',
 			'md': '720px',
 			'lg': '960px',

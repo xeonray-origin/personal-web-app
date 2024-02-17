@@ -6,7 +6,14 @@ import {
 	List,
 	ListItem,
 	ListItemPrefix,
+	ListItemSuffix,
 	ThemeProvider,
+	Timeline,
+	TimelineBody,
+	TimelineConnector,
+	TimelineHeader,
+	TimelineIcon,
+	TimelineItem,
 	Typography,
 } from '@material-tailwind/react'
 
@@ -17,5 +24,12 @@ export {
 	Typography,
 	ListItem,
 	List,
+	ListItemSuffix,
 	ListItemPrefix,
+	Timeline,
+	TimelineBody,
+	TimelineConnector,
+	TimelineHeader,
+	TimelineIcon,
+	TimelineItem,
 }

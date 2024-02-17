@@ -1,10 +1,30 @@
-import { AppWindow, CircleUser, Contact, Github, Home, Rss } from 'lucide-react'
+'use client'
 
-import { List, ListItem, ListItemPrefix, Typography } from './ui'
+import { useState } from 'react'
+import {
+	AppWindow,
+	ArrowLeftIcon,
+	ChevronLeft,
+	CircleUser,
+	Contact,
+	Github,
+	Home,
+	Rss,
+} from 'lucide-react'
+
+import {
+	List,
+	ListItem,
+	ListItemPrefix,
+	ListItemSuffix,
+	Typography,
+} from './ui'
 
 const Sidebar = () => {
+	const [active, setActive] = useState('home')
+
 	return (
-		<div className='fixed h-[100vh] w-[15rem] bg-black'>
+		<div className='sx:hidden fixed h-[100vh] w-[15rem] bg-black sm:hidden md:block'>
 			<div className='container mt-5 flex grow flex-row place-content-center'>
 				<Typography
 					placeholder={''}
@@ -16,42 +36,103 @@ const Sidebar = () => {
 				<div className='ml-1 mt-[1.2rem] size-1 rounded-lg bg-secondary' />
 			</div>
 			<div className='mt-5 flex grow flex-row place-content-center'>
-				<List className='p-4' placeholder={''}>
-					<ListItem placeholder={''}>
+				<List className='space-y-5 p-4' placeholder={''}>
+					<ListItem
+						selected={false}
+						onClick={() => setActive('home')}
+						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
+						placeholder={''}
+					>
 						<ListItemPrefix placeholder={''}>
 							<Home />
+							<div className='' />
 						</ListItemPrefix>
 						Home
+						{active === 'home' && (
+							<ListItemSuffix placeholder={''} className='text-secondary'>
+								<ChevronLeft />
+							</ListItemSuffix>
+						)}
 					</ListItem>
-					<ListItem placeholder={''}>
+					<ListItem
+						selected={false}
+						onClick={() => setActive('projects')}
+						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
+						placeholder={''}
+					>
 						<ListItemPrefix placeholder={''}>
 							<AppWindow />
 						</ListItemPrefix>
 						My Projects
+						{active === 'projects' && (
+							<ListItemSuffix placeholder={''} className='text-secondary'>
+								<ChevronLeft />
+							</ListItemSuffix>
+						)}
 					</ListItem>
-					<ListItem placeholder={''}>
+					<ListItem
+						selected={false}
+						onClick={() => setActive('about')}
+						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
+						placeholder={''}
+					>
 						<ListItemPrefix placeholder={''}>
 							<CircleUser />
 						</ListItemPrefix>
 						About me
+						{active === 'about' && (
+							<ListItemSuffix placeholder={''} className='text-secondary'>
+								<ChevronLeft />
+							</ListItemSuffix>
+						)}
 					</ListItem>
-					<ListItem placeholder={''}>
+					<ListItem
+						selected={false}
+						onClick={() => setActive('contact')}
+						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
+						placeholder={''}
+					>
 						<ListItemPrefix placeholder={''}>
 							<Contact />
 						</ListItemPrefix>
 						Contact me
+						{active === 'contact' && (
+							<ListItemSuffix placeholder={''} className='text-secondary'>
+								<ChevronLeft />
+							</ListItemSuffix>
+						)}
 					</ListItem>
-					<ListItem placeholder={''}>
+					<ListItem
+						selected={false}
+						onClick={() => setActive('git')}
+						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
+						placeholder={''}
+					>
 						<ListItemPrefix placeholder={''}>
 							<Github />
 						</ListItemPrefix>
 						My Github
+						{active === 'git' && (
+							<ListItemSuffix placeholder={''} className='text-secondary'>
+								<ChevronLeft />
+							</ListItemSuffix>
+						)}
 					</ListItem>
-					<ListItem placeholder={''}>
+					<ListItem
+						selected={false}
+						onClick={() => setActive('blogs')}
+						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
+						placeholder={''}
+					>
 						<ListItemPrefix placeholder={''}>
 							<Rss />
 						</ListItemPrefix>
 						Blogs
+						{active === 'blogs' && (
+							<ListItemSuffix placeholder={''} className='text-secondary'>
+								<ChevronLeft />
+							</ListItemSuffix>
+						)}
 					</ListItem>
 				</List>
 			</div>

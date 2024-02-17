@@ -2,7 +2,7 @@ import { Typography } from './ui'
 
 const About = () => {
 	return (
-		<div className=' w-[70%] px-5 pt-5 text-white'>
+		<div>
 			<Typography placeholder={''} className='font-bold' variant='lead'>
 				About me
 			</Typography>
