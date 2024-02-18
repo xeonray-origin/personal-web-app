@@ -13,7 +13,11 @@ import {
 const ExperienceTimeline = () => {
 	return (
 		<div className='mt-[2rem]'>
-			<Typography className='font-bold' placeholder={''} variant='lead'>
+			<Typography
+				className='mt-[1rem] text-center font-bold md:text-left'
+				placeholder={''}
+				variant='lead'
+			>
 				Work Experience
 			</Typography>
 			<div className='mt-5 w-[90%]'>

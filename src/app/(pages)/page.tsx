@@ -16,11 +16,11 @@ export default function Home() {
 				<Header />
 			</div>
 			<div className='flex min-h-[100vh] w-full flex-wrap'>
-				<div className=' px-5 pt-5 text-white lg:w-[70%]'>
+				<div className=' w-100 px-5 pt-5 text-white lg:w-[70%]'>
 					<About />
 					<ExperienceTimeline />
 				</div>
-				<div className='xs:max-md:hidden w-full flex-wrap px-2 py-1 text-white md:w-[30%]'>
+				<div className=' w-full flex-wrap text-white lg:w-[30%]'>
 					<Skills />
 					<Projects />
 				</div>
