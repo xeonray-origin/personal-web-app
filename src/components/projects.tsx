@@ -3,7 +3,7 @@ import { Github } from 'lucide-react'
 import { Button, Typography } from './ui'
 
 const ProjectHolder = () => (
-	<div className='mt-2 min-h-[5rem] min-w-full rounded-none border-[0.1rem] border-secondary bg-primary p-3 font-thin'>
+	<div className=' rounded-2 mx-2 mr-[1.2rem] mt-2 min-h-[5rem] border-[1px] border-secondary bg-primary p-3 font-thin sm:mr-0'>
 		<div className='item-center flex'>
 			<div className='grow'>
 				<Typography placeholder={''} className='font-bold' variant='paragraph'>
@@ -99,7 +99,7 @@ const Projects = () => {
 					See all projects
 				</Typography>
 			</div>
-			<div className=' w-100 px-0 sm:mx-5 md:mx-2 lg:mx-0'>
+			<div className=' w-100 flex flex-col justify-center sm:mx-0 sm:pr-[0rem] md:mx-2 lg:mx-0'>
 				<ProjectHolder />
 				<ProjectHolder />
 			</div>
