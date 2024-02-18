@@ -1,31 +1,33 @@
 import Image from 'next/image'
-import { Save } from 'lucide-react'
+import { Menu, Save } from 'lucide-react'
 
 import { Avatar, Button, Typography } from './ui'
 
 const Header = () => {
 	return (
-		<div className='flex h-[16rem] flex-col sm:h-[18rem]'>
-			<div className=' bg-blue-gray-500 z-10 h-[12rem] w-full bg-[url(/header.svg)] sm:h-[10rem]' />
-			<div className='sm:item-center absolute z-30 flex grow basis-full flex-row pl-2 sm:mt-[5rem] sm:items-center md:mt-[8.5rem]'>
+		<div className='w-100 flex h-[16rem] w-full flex-wrap bg-[url(/header.svg)] md:flex-row md:pl-3'>
+			<div className='flex w-full flex-row bg-red-400'>
+				<Menu className='item-end size-8 justify-end text-white' />
+			</div>
+			<div className=' relative z-30 flex w-full items-center justify-center md:justify-start '>
 				<Avatar
-					className='!size-[8rem] border-2 border-white'
+					className='top-[10rem] !size-[8rem]  border-2 border-white md:top-[13rem]'
 					src='/photo.jpeg'
 					alt='avatar'
 					placeholder={''}
 				/>
 			</div>
-			<div className='h-[5rem] flex-row items-center sm:pt-[5rem] md:ml-[9rem] md:flex   md:pt-1 '>
-				<div className='grow'>
+			<div className='item-center justify-centerpt-5 mt-[10rem] h-[5rem] w-full pt-5 md:ml-2 md:mt-[8rem] md:flex md:justify-normal md:pt-1'>
+				<div className='text-center md:ml-[8rem] md:grow md:text-left '>
 					<Typography
-						className=' truncate text-nowrap text-white'
+						className=' truncate text-nowrap text-2xl text-white'
 						placeholder={''}
 						variant='h3'
 					>
 						Amritendu Bhattacharjee
 					</Typography>
 					<Typography
-						className='truncate text-nowrap text-white'
+						className='text-md md:text-md truncate text-nowrap text-white lg:text-lg'
 						placeholder={''}
 						variant='lead'
 					>
@@ -34,7 +36,7 @@ const Header = () => {
 				</div>
 				<Button
 					placeholder={''}
-					className='m-0	flex items-center !rounded-none bg-secondary font-thin normal-case'
+					className=' rounded-5 invisible mx-auto mt-8 flex !rounded-none border-none bg-secondary font-normal normal-case md:visible md:float-end md:m-0 md:mr-2 md:mt-1 md:h-[3.3rem] lg:mr-0'
 					size='lg'
 					variant='outlined'
 				>

@@ -2,11 +2,19 @@ import { Typography } from './ui'
 
 const About = () => {
 	return (
-		<div>
-			<Typography placeholder={''} className='font-bold' variant='lead'>
+		<div className='pr-1'>
+			<Typography
+				placeholder={''}
+				className='text-center md:text-left'
+				variant='lead'
+			>
 				About me
 			</Typography>
-			<Typography placeholder={''} variant='paragraph'>
+			<Typography
+				className='text-center md:text-left'
+				placeholder={''}
+				variant='paragraph'
+			>
 				Lorem Ipsum is simply dummy text of the printing and typesetting
 				industry. Lorem Ipsum has been the industrys standard dummy text ever
 				since the 1500s, when an unknown printer took a galley of type and
@@ -16,7 +24,11 @@ const About = () => {
 				of Letraset sheets containing Lorem Ipsum passages, and more recently
 				with desktop publishing software like Aldus
 			</Typography>
-			<Typography className='mt-3' variant='paragraph' placeholder={undefined}>
+			<Typography
+				className='mt-3 text-center md:text-left'
+				variant='paragraph'
+				placeholder={undefined}
+			>
 				PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy
 				text of the printing and typesetting industry. Lorem Ipsum has been the
 				industrys standard dummy text ever since the 1500s, when an unknown
@@ -29,7 +41,7 @@ const About = () => {
 			</Typography>
 			<Typography
 				placeholder={''}
-				className='mt-3 cursor-pointer text-blue-500'
+				className='mt-3 cursor-pointer text-center text-blue-500 md:text-left'
 				variant='paragraph'
 			>
 				Read more ...

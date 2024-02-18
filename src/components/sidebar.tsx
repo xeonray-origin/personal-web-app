@@ -24,8 +24,8 @@ const Sidebar = () => {
 	const [active, setActive] = useState('home')
 
 	return (
-		<div className='sx:hidden fixed h-[100vh] w-[15rem] bg-black sm:hidden md:block'>
-			<div className='container mt-5 flex grow flex-row place-content-center'>
+		<div className='xs:max-md:relative fixed hidden h-[100vh] w-[15rem] bg-black lg:block'>
+			<div className='container mt-5  flex grow flex-row place-content-center'>
 				<Typography
 					placeholder={''}
 					className='items-center text-center font-bold text-white'

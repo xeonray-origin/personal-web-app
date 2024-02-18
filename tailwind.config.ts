@@ -3,6 +3,7 @@ import withMT from '@material-tailwind/react/utils/withMT'
 
 module.exports = withMT({
 	content: ['./src/**/*.{ts,tsx}'],
+
 	theme: {
 		darkMode: true,
 		colors: {
@@ -25,19 +26,18 @@ module.exports = withMT({
 			'inner': 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
 			'none': '0 0 rgb(0, 0 / 0, 0)',
 		},
-		screens: {
-			'xs': '320px',
-			'sm': '540px',
-			'md': '720px',
-			'lg': '960px',
-			'lg-max': { max: '960px' },
-			'xl': '1140px',
-			'2xl': '1320px',
-		},
 		fontFamily: {
 			sans: ['Poppins', 'sans-serif'],
 			serif: ['Poppins', 'serif'],
 			body: ['Poppins', 'sans-serif'],
+		},
+		screen: {
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1536px',
+			'hidpi': '900px',
 		},
 	},
 	plugins: [],
