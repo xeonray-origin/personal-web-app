@@ -1,5 +1,8 @@
 const settings = {
-	output: 'export',
+	output: 'standalone',
+	experimental: {
+		outputStandalone: true,
+	},
 	compiler: {
 		removeConsole: false,
 	},
