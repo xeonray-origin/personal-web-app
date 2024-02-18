@@ -1,5 +1,5 @@
 const settings = {
-	output: 'standalone',
+	output: 'export',
 	experimental: {
 		outputStandalone: true,
 	},
