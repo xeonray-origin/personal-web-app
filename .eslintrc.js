@@ -36,6 +36,7 @@ const config = {
 		'tailwindcss/classnames-order': 'off',
 		'tailwindcss/no-custom-classname': 'off',
 	},
+	inclues: ['./src/**/*', './next.config.js', './tailwind.config.ts'],
 }
 
 module.exports = config

@@ -1,4 +1,3 @@
-import { Poppins } from 'next/font/google'
 import withMT from '@material-tailwind/react/utils/withMT'
 
 module.exports = withMT({
