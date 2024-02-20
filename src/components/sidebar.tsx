@@ -10,10 +10,13 @@ import {
 	Contact,
 	Github,
 	Home,
+	Instagram,
+	Linkedin,
 	Rss,
 } from 'lucide-react'
 
 import {
+	IconButton,
 	List,
 	ListItem,
 	ListItemPrefix,
@@ -40,7 +43,7 @@ const Sidebar = () => {
 	}, [pathname])
 
 	return (
-		<div className='xs:max-md:relative fixed hidden h-[100vh] w-[15rem] bg-black lg:block'>
+		<div className='xs:max-md:relative bg-black-default fixed hidden h-[100vh] w-[14rem] lg:block'>
 			<div className='container mt-5  flex grow flex-row place-content-center'>
 				<Typography
 					placeholder={''}
@@ -120,22 +123,6 @@ const Sidebar = () => {
 					</ListItem>
 					<ListItem
 						selected={false}
-						onClick={() => setActive('git')}
-						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
-						placeholder={''}
-					>
-						<ListItemPrefix placeholder={''}>
-							<Github />
-						</ListItemPrefix>
-						My Github
-						{active === 'git' && (
-							<ListItemSuffix placeholder={''} className='text-secondary'>
-								<ChevronLeft />
-							</ListItemSuffix>
-						)}
-					</ListItem>
-					<ListItem
-						selected={false}
 						onClick={() => setActive('blogs')}
 						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
 						placeholder={''}
@@ -151,6 +138,32 @@ const Sidebar = () => {
 						)}
 					</ListItem>
 				</List>
+			</div>
+			<div className='absolute bottom-0 left-0 flex h-12 w-[100%] flex-row items-center justify-center gap-x-5 '>
+				<IconButton
+					placeholder={''}
+					variant='outlined'
+					className='hover:text-black-default border-secondary text-secondary hover:bg-secondary'
+					size='sm'
+				>
+					<Github className='size-4' />
+				</IconButton>
+				<IconButton
+					placeholder={''}
+					variant='outlined'
+					className='hover:text-black-default border-secondary text-secondary	hover:bg-secondary'
+					size='sm'
+				>
+					<Linkedin className='size-4' />
+				</IconButton>
+				<IconButton
+					placeholder={''}
+					variant='outlined'
+					className='hover:text-black-default border-secondary text-secondary hover:bg-secondary'
+					size='sm'
+				>
+					<Instagram className='size-4' />
+				</IconButton>
 			</div>
 		</div>
 	)

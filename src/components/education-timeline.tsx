@@ -10,7 +10,7 @@ import {
 	Typography,
 } from './ui'
 
-const ExperienceTimeline = () => {
+const EducationTimeline = () => {
 	return (
 		<div className='mt-[2rem]'>
 			<Typography
@@ -18,7 +18,7 @@ const ExperienceTimeline = () => {
 				placeholder={''}
 				variant='lead'
 			>
-				Work Experience
+				Academic Chronology
 			</Typography>
 			<div className='mt-5 w-[90%]'>
 				<Timeline>
@@ -98,4 +98,4 @@ const ExperienceTimeline = () => {
 		</div>
 	)
 }
-export default ExperienceTimeline
+export default EducationTimeline
