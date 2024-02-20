@@ -6,7 +6,7 @@ import { Button, ThemeProvider } from '@/components/ui'
 
 import '@/styles/globals.css'
 
-import { Sidebar } from '@/components'
+import { FloatingMenu, Header, Sidebar } from '@/components'
 import { cn } from '@/lib/utils'
 
 const font = Poppins({
@@ -36,8 +36,11 @@ export default function RootLayout({
 				>
 					<div className='flex bg-primary'>
 						<Sidebar />
-						<div className=' w-[100vw] bg-primary pb-5 lg:ml-[15rem] lg:pr-10'>
+						<div className=' w-[calc(100vw - 14rem)] bg-primary pb-20 pr-0 lg:ml-[14rem] lg:pr-5'>
 							{children}
+						</div>
+						<div className='fixed bottom-5 right-5 lg:hidden'>
+							<FloatingMenu />
 						</div>
 					</div>
 				</ThemeProvider>

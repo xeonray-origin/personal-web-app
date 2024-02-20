@@ -1,14 +1,16 @@
 import Image from 'next/image'
 import { Menu, Save } from 'lucide-react'
 
+import { FloatingMenu } from '.'
 import { Avatar, Button, Typography } from './ui'
 
 const Header = () => {
 	return (
-		<div className='w-100 flex h-[16rem] w-full flex-wrap bg-[url(/header.svg)] md:flex-row md:pl-3'>
+		<div className='w-100 rounded-2 rounded-2 flex h-[16rem] w-full flex-wrap bg-[url(/header.svg)] md:flex-row md:pl-3'>
 			{/* <div className='flex w-full flex-row bg-red-400'>
 				<Menu className='item-end size-8 justify-end text-white' />
 			</div> */}
+
 			<div className=' relative z-30 flex w-full items-center justify-center md:justify-start '>
 				<Avatar
 					className='top-[10rem] !size-[8rem]  border-2 border-white md:top-[13rem]'

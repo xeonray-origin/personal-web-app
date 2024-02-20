@@ -1,13 +1,12 @@
 import {
 	About,
+	AcademicTimeline,
 	ExperienceTimeline,
 	Header,
 	Projects,
+	RecognitionSection,
 	Skills,
 } from '@/components'
-import { Github } from 'lucide-react'
-
-import { Button, Typography } from '@/components/ui'
 
 export default function Home() {
 	return (
@@ -19,10 +18,12 @@ export default function Home() {
 				<div className=' w-100 px-5 pt-5 text-white lg:w-[70%]'>
 					<About />
 					<ExperienceTimeline />
+					<AcademicTimeline />
 				</div>
 				<div className=' w-full flex-wrap text-white lg:w-[30%]'>
 					<Skills />
 					<Projects />
+					<RecognitionSection />
 				</div>
 			</div>
 		</div>

@@ -9,7 +9,10 @@ module.exports = withMT({
 			primary: '#10191d',
 			secondary: '#00dac6',
 			white: '#ffffff',
-			black: '#0e171b',
+			black: {
+				'default': '#0e171b',
+				'500': '#0E171B81',
+			},
 			warning: '#CB313B',
 			success: '#00DAC6',
 			info: '#2994D2',
