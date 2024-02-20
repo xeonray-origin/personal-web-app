@@ -5,9 +5,6 @@ import {
 	Projects,
 	Skills,
 } from '@/components'
-import { Github } from 'lucide-react'
-
-import { Button, Typography } from '@/components/ui'
 
 export default function Home() {
 	return (

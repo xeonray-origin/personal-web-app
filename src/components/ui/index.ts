@@ -3,6 +3,7 @@
 import {
 	Avatar,
 	Button,
+	Card,
 	List,
 	ListItem,
 	ListItemPrefix,
@@ -22,6 +23,7 @@ export {
 	Button,
 	Avatar,
 	Typography,
+	Card,
 	ListItem,
 	List,
 	ListItemSuffix,

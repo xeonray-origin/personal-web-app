@@ -6,7 +6,7 @@ import { Button, ThemeProvider } from '@/components/ui'
 
 import '@/styles/globals.css'
 
-import { Sidebar } from '@/components'
+import { Header, Sidebar } from '@/components'
 import { cn } from '@/lib/utils'
 
 const font = Poppins({
@@ -36,6 +36,7 @@ export default function RootLayout({
 				>
 					<div className='flex bg-primary'>
 						<Sidebar />
+
 						<div className=' w-[100vw] bg-primary pb-5 lg:ml-[15rem] lg:pr-10'>
 							{children}
 						</div>

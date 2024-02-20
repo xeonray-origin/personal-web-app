@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import {
 	AppWindow,
 	ArrowLeftIcon,
@@ -22,6 +23,21 @@ import {
 
 const Sidebar = () => {
 	const [active, setActive] = useState('home')
+	const router = useRouter()
+	const pathname = usePathname()
+
+	const handleClick = (name: string) => {
+		router.push(`/${name === 'home' ? '' : name}`, { scroll: false })
+	}
+
+	useEffect(() => {
+		console.log(pathname)
+		if (pathname === '/') {
+			setActive('home')
+		} else {
+			setActive(pathname.replace('/', ''))
+		}
+	}, [pathname])
 
 	return (
 		<div className='xs:max-md:relative fixed hidden h-[100vh] w-[15rem] bg-black lg:block'>
@@ -39,7 +55,7 @@ const Sidebar = () => {
 				<List className='space-y-5 p-4' placeholder={''}>
 					<ListItem
 						selected={false}
-						onClick={() => setActive('home')}
+						onClick={() => handleClick('home')}
 						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
 						placeholder={''}
 					>
@@ -56,7 +72,7 @@ const Sidebar = () => {
 					</ListItem>
 					<ListItem
 						selected={false}
-						onClick={() => setActive('projects')}
+						onClick={() => handleClick('projects')}
 						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
 						placeholder={''}
 					>
