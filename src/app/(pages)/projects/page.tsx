@@ -27,17 +27,21 @@ const ProjectsDropdown = (props: any) => {
 	const { title, longDescription, git, shortDescription, icon } = props
 	return (
 		<Accordion
-			className='round !h-full !rounded-md border-[0.1rem] border-secondary border-opacity-20  shadow-secondary'
+			className='!h-full !rounded-[0.5rem] border-[0.1rem] border-secondary border-opacity-20  shadow-secondary'
 			placeholder={''}
 			open={true}
 		>
 			<AccordionHeader
 				placeholder={''}
-				className='bg-black-default flex flex-row flex-wrap border-b-0 !border-secondary pl-2 text-white hover:cursor-default hover:!text-white'
+				className='bg-black-default flex  flex-row flex-wrap !rounded-[0.5rem] border-b-0 !border-secondary pl-2 text-white hover:cursor-default hover:!text-white'
 			>
 				<div className='flex flex-row space-x-2 '>
-					<Typography variant='h3'>{title}</Typography>
-					<IconButton className='bg-transparent'>{icon}</IconButton>
+					<Typography placeholder={''} variant='h3'>
+						{title}
+					</Typography>
+					<IconButton placeholder={''} className='bg-transparent'>
+						{icon}
+					</IconButton>
 				</div>
 
 				<Typography
@@ -48,18 +52,22 @@ const ProjectsDropdown = (props: any) => {
 					{shortDescription}
 				</Typography>
 			</AccordionHeader>
-			<AccordionBody className='border-none p-2 text-white'>
-				<Typography variant='paragraph' className='text-balance'>
+			<AccordionBody className='!rounded-[0.5rem] border-none p-2  text-white'>
+				<Typography
+					placeholder={''}
+					variant='paragraph'
+					className='text-balance'
+				>
 					{longDescription}
 				</Typography>
 
-				<div className='absolute bottom-0 right-0 flex h-auto w-[100%] flex-row items-center justify-end gap-x-2 bg-secondary bg-opacity-15 px-2 py-1'>
-					<div className='grow flex-wrap space-x-1 space-y-1'>
+				<div className='!rounded-b-full-[0.3rem] absolute bottom-0 right-0 flex h-auto w-[100%] flex-row items-center justify-end gap-x-2 bg-secondary bg-opacity-15 px-2 py-1'>
+					<div className='item-center pt-auto grow flex-wrap space-x-1'>
 						<Button
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='bg-black-default rounded-none text-secondary'
+							className='bg-black-default rounded-md text-secondary'
 						>
 							Typescript
 						</Button>
@@ -67,7 +75,7 @@ const ProjectsDropdown = (props: any) => {
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='bg-black-default rounded-none text-secondary'
+							className='bg-black-default rounded-md text-secondary'
 						>
 							Nextjs
 						</Button>
@@ -75,7 +83,7 @@ const ProjectsDropdown = (props: any) => {
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='bg-black-default rounded-none text-secondary'
+							className='bg-black-default rounded-md text-secondary'
 						>
 							Tailwind
 						</Button>
@@ -83,7 +91,7 @@ const ProjectsDropdown = (props: any) => {
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='bg-black-default rounded-none text-secondary'
+							className='bg-black-default rounded-md text-secondary'
 						>
 							React
 						</Button>
@@ -91,15 +99,15 @@ const ProjectsDropdown = (props: any) => {
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='bg-black-default rounded-none text-secondary'
+							className='bg-black-default rounded-md text-secondary'
 						>
 							React
 						</Button>
 					</div>
-					<IconButton size='sm' className='bg-secondary'>
+					<IconButton size='sm' className='bg-secondary p-3'>
 						<Github className='text-black-default' />
 					</IconButton>
-					<IconButton size='sm' className='bg-secondary'>
+					<IconButton size='sm' className='bg-secondary p-3'>
 						<Link className='text-black-default' />
 					</IconButton>
 				</div>
@@ -121,7 +129,7 @@ const Projects = () => {
 						Projects
 					</Typography>
 				</div>
-				<div className='lg:gap-right-0 flex  !h-[100%] w-full flex-row flex-wrap gap-2 px-5 pb-3 pt-5 lg:gap-y-3 lg:pr-0'>
+				<div className='lg:gap-right-0 flex  !h-[100%] w-full flex-row flex-wrap gap-2 px-5 pb-3 pt-5 md:gap-1 lg:gap-y-3 lg:pr-0'>
 					{projects.sampleData.map((data) => {
 						return (
 							<div className='h-auto min-h-[26rem] w-full lg:max-w-[49.6%]'>

@@ -2,7 +2,15 @@
 
 import { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { AppWindow, Github, HomeIcon, PlusIcon } from 'lucide-react'
+import {
+	AppWindow,
+	Contact,
+	Github,
+	HomeIcon,
+	PlusIcon,
+	Rss,
+	Save,
+} from 'lucide-react'
 
 import {
 	IconButton,
@@ -10,6 +18,7 @@ import {
 	SpeedDialAction,
 	SpeedDialContent,
 	SpeedDialHandler,
+	Typography,
 } from './ui'
 
 const FloatingMenu = () => {
@@ -17,6 +26,11 @@ const FloatingMenu = () => {
 	const router = useRouter()
 	const pathname = usePathname()
 	const [open, setOpen] = useState(false)
+	const labelProps = {
+		variant: 'small',
+		className:
+			'absolute top-2/4 -left-2/4 -translate-y-2/4 -translate-x-3/4 font-normal bg-black-default p-1 text-white',
+	}
 
 	const handleClick = (name: string) => {
 		router.push(`/${name === 'home' ? '' : name}`, { scroll: false })
@@ -50,6 +64,9 @@ const FloatingMenu = () => {
 					placeholder={undefined}
 				>
 					<HomeIcon className='h-5 w-5' />
+					<Typography placeholder={''} {...labelProps}>
+						Home
+					</Typography>
 				</SpeedDialAction>
 				<SpeedDialAction
 					className={active === 'projects' ? 'bg-secondary text-black' : ''}
@@ -57,9 +74,33 @@ const FloatingMenu = () => {
 					placeholder={undefined}
 				>
 					<AppWindow className='h-5 w-5' />
+					<Typography placeholder={''} {...labelProps}>
+						Projects
+					</Typography>
+				</SpeedDialAction>
+				<SpeedDialAction
+					onClick={() => handleClick('contact')}
+					placeholder={undefined}
+				>
+					<Contact className='h-5 w-5' />
+					<Typography placeholder={''} {...labelProps}>
+						Contact
+					</Typography>
+				</SpeedDialAction>
+				<SpeedDialAction
+					onClick={() => handleClick('blogs')}
+					placeholder={undefined}
+				>
+					<Rss className='h-5 w-5' />
+					<Typography placeholder={''} {...labelProps}>
+						Blogs
+					</Typography>
 				</SpeedDialAction>
 				<SpeedDialAction placeholder={undefined}>
-					<Github className='h-5 w-5' />
+					<Save className='h-5 w-5' />
+					<Typography placeholder={''} {...labelProps}>
+						Download Resume
+					</Typography>
 				</SpeedDialAction>
 			</SpeedDialContent>
 		</SpeedDial>

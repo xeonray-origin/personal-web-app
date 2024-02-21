@@ -6,20 +6,16 @@ import { Avatar, Button, Typography } from './ui'
 
 const Header = () => {
 	return (
-		<div className='w-100 rounded-2 rounded-2 flex h-[16rem] w-full flex-wrap bg-[url(/header.svg)] md:flex-row md:pl-3'>
-			{/* <div className='flex w-full flex-row bg-red-400'>
-				<Menu className='item-end size-8 justify-end text-white' />
-			</div> */}
-
+		<div className='w-100 rounded-2 rounded-2 flex h-[12rem] w-full flex-wrap bg-[url(/header.svg)] md:flex-row md:pl-3'>
 			<div className=' relative z-30 flex w-full items-center justify-center md:justify-start '>
 				<Avatar
-					className='top-[10rem] !size-[8rem]  border-2 border-white md:top-[13rem]'
+					className='top-[8rem] !size-[8rem]  border-2 border-white md:top-[9rem]'
 					src='/photo.jpeg'
 					alt='avatar'
 					placeholder={''}
 				/>
 			</div>
-			<div className='item-center justify-centerpt-5 mt-[10rem] h-[5rem] w-full pt-5 md:ml-2 md:mt-[8rem] md:flex md:justify-normal md:pt-1'>
+			<div className='item-center justify-centerpt-5 mt-[7rem] h-[5rem] w-full pt-5 md:ml-2 md:mt-[4rem] md:flex md:justify-normal md:pt-1'>
 				<div className='text-center md:ml-[8rem] md:grow md:text-left '>
 					<Typography
 						className=' truncate text-nowrap text-2xl text-white'

@@ -91,23 +91,7 @@ const Sidebar = () => {
 					</ListItem>
 					<ListItem
 						selected={false}
-						onClick={() => setActive('about')}
-						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
-						placeholder={''}
-					>
-						<ListItemPrefix placeholder={''}>
-							<CircleUser />
-						</ListItemPrefix>
-						About me
-						{active === 'about' && (
-							<ListItemSuffix placeholder={''} className='text-secondary'>
-								<ChevronLeft />
-							</ListItemSuffix>
-						)}
-					</ListItem>
-					<ListItem
-						selected={false}
-						onClick={() => setActive('contact')}
+						onClick={() => handleClick('contact')}
 						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
 						placeholder={''}
 					>

@@ -36,7 +36,7 @@ export default function RootLayout({
 				>
 					<div className='flex bg-primary'>
 						<Sidebar />
-						<div className=' w-100 h-[100%]  bg-primary pb-20 pr-0 lg:ml-[14rem] lg:pr-5'>
+						<div className=' w-100 h-[100%] max-w-[2400px]  bg-primary pb-20 pr-0 lg:ml-[14rem] lg:pr-5'>
 							{children}
 						</div>
 						<div className='fixed bottom-5 right-5 lg:hidden'>
