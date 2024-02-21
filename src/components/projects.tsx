@@ -1,18 +1,31 @@
-import { Github } from 'lucide-react'
+import { Github, Link } from 'lucide-react'
 
-import { Button, Typography } from './ui'
+import { Button, Chip, Typography } from './ui'
 
 const ProjectHolder = () => (
-	<div className=' rounded-2 mx-2 mr-[1.2rem] mt-2 min-h-[5rem] border-[1px] border-secondary bg-primary p-3 font-thin sm:mr-0'>
-		<div className='item-center flex'>
+	<div className='mx-2 mr-[1.2rem] mt-2 min-h-[5rem] !rounded-[0.4rem] border-[1px] border-secondary bg-primary p-2 font-thin sm:mr-0'>
+		<div className='item-center flex gap-x-1'>
 			<div className='grow'>
-				<Typography placeholder={''} className='font-bold' variant='paragraph'>
+				<Typography placeholder={''} className='' variant='paragraph'>
 					Weather App
 				</Typography>
 			</div>
-			<Github className='text-secondary' />
+			<Chip
+				size='sm'
+				className='!rounded-[0.3rem] border-secondary font-thin normal-case text-secondary'
+				variant='outlined'
+				icon={<Link size={'sm'} />}
+				value='Link'
+			/>
+			<Chip
+				size='sm'
+				className=' !rounded-[0.3rem] border-secondary font-thin normal-case text-secondary'
+				icon={<Github size={'sm'} />}
+				value='Repo'
+				variant='outlined'
+			/>
 		</div>
-		<div className='item-start flex flex-row'>
+		<div className='item-start flex flex-row pt-5'>
 			<Typography placeholder={''} className='text-xs' variant='small'>
 				Lorem Ipsum is simply dummy text of the printing and typesetting
 				industry.
@@ -20,56 +33,50 @@ const ProjectHolder = () => (
 		</div>
 		<div className='item-end mt-3  h-[100%] grid-flow-row'>
 			<Button
-				disabled
 				size='sm'
 				placeholder={''}
 				variant='text'
-				className='rounded-none bg-black text-secondary'
+				className='bg-black-default rounded-none text-secondary'
 			>
 				Typescript
 			</Button>
 			<Button
-				disabled
 				size='sm'
 				placeholder={''}
 				variant='text'
-				className='rounded-none bg-black text-secondary'
+				className='bg-black-default rounded-none text-secondary'
 			>
 				Nextjs
 			</Button>
 			<Button
-				disabled
 				size='sm'
 				placeholder={''}
 				variant='text'
-				className='rounded-none bg-black text-secondary'
+				className='bg-black-default rounded-none text-secondary'
 			>
 				Tailwind
 			</Button>
 			<Button
-				disabled
 				size='sm'
 				placeholder={''}
 				variant='text'
-				className='rounded-none bg-black text-secondary'
+				className='bg-black-default rounded-none text-secondary'
 			>
 				React
 			</Button>
 			<Button
-				disabled
 				size='sm'
 				placeholder={''}
 				variant='text'
-				className='rounded-none bg-black text-secondary'
+				className='bg-black-default rounded-none text-secondary'
 			>
 				React
 			</Button>
 			<Button
-				disabled
 				size='sm'
 				placeholder={''}
 				variant='text'
-				className='rounded-none bg-black text-secondary'
+				className='bg-black-default rounded-none text-secondary'
 			>
 				React
 			</Button>
@@ -83,7 +90,7 @@ const Projects = () => {
 			<div className='flex items-start px-2 lg:px-0'>
 				<div className='grow'>
 					<Typography
-						className='sm:text-md text-nowrap  text-sm font-bold md:text-lg lg:text-lg'
+						className='sm:text-md text-nowrap  text-sm  md:text-lg lg:text-lg'
 						placeholder={''}
 						variant='lead'
 					>
