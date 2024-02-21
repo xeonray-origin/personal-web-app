@@ -27,6 +27,7 @@
 		"@types/node": "^20.11.17",
 		"@types/react": "^18.2.55",
 		"@types/react-dom": "^18.2.19",
+		"@types/uniqid": "^5.3.4",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
 		"autoprefixer": "^10.4.17",
@@ -39,6 +40,7 @@
 		"prettier": "^3.2.5",
 		"prettier-plugin-tailwindcss": "^0.5.11",
 		"tailwindcss": "^3.4.1",
-		"typescript": "^5.3.3"
+		"typescript": "^5.3.3",
+		"uniqid": "^5.4.0"
 	}
 }

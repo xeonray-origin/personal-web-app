@@ -16,6 +16,7 @@ const FloatingMenu = () => {
 	const [active, setActive] = useState('home')
 	const router = useRouter()
 	const pathname = usePathname()
+	const [open, setOpen] = useState(false)
 
 	const handleClick = (name: string) => {
 		router.push(`/${name === 'home' ? '' : name}`, { scroll: false })
@@ -29,13 +30,15 @@ const FloatingMenu = () => {
 			setActive(pathname.replace('/', ''))
 		}
 	}, [pathname])
+
 	return (
-		<SpeedDial className='bg-white'>
+		<SpeedDial open={open} className='bg-white'>
 			<SpeedDialHandler>
 				<IconButton
+					onClick={() => setOpen(!open)}
 					placeholder={''}
 					size='lg'
-					className='rounded-full bg-secondary bg-opacity-50 text-black transition-colors hover:bg-opacity-100 group-hover:bg-opacity-100 group-hover:text-white'
+					className='rounded-full !bg-secondary text-black focus:!bg-secondary  '
 				>
 					<PlusIcon className='h-5 w-5 transition-transform group-hover:rotate-45' />
 				</IconButton>

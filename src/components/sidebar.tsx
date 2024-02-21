@@ -143,26 +143,26 @@ const Sidebar = () => {
 				<IconButton
 					placeholder={''}
 					variant='outlined'
-					className='hover:text-black-default border-secondary text-secondary hover:bg-secondary'
+					className='hover:text-black-default border-secondary text-secondary subpixel-antialiased hover:bg-secondary'
 					size='sm'
 				>
-					<Github className='size-4' />
+					<Github className='size-4 subpixel-antialiased' />
 				</IconButton>
 				<IconButton
 					placeholder={''}
 					variant='outlined'
-					className='hover:text-black-default border-secondary text-secondary	hover:bg-secondary'
+					className='hover:text-black-default border-secondary text-secondary subpixel-antialiased	hover:bg-secondary'
 					size='sm'
 				>
-					<Linkedin className='size-4' />
+					<Linkedin className='size-4 subpixel-antialiased' />
 				</IconButton>
 				<IconButton
 					placeholder={''}
 					variant='outlined'
-					className='hover:text-black-default border-secondary text-secondary hover:bg-secondary'
+					className='hover:text-black-default border-secondary text-secondary subpixel-antialiased hover:bg-secondary'
 					size='sm'
 				>
-					<Instagram className='size-4' />
+					<Instagram className='size-4 subpixel-antialiased' />
 				</IconButton>
 			</div>
 		</div>
