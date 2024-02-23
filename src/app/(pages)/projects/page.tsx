@@ -33,7 +33,7 @@ const ProjectsDropdown = (props: any) => {
 		>
 			<AccordionHeader
 				placeholder={''}
-				className='bg-black-default flex  flex-row flex-wrap !rounded-[0.5rem] border-b-0 !border-secondary pl-2 text-white hover:cursor-default hover:!text-white'
+				className='flex flex-row  flex-wrap !rounded-[0.5rem] border-b-0 !border-secondary bg-black-default pl-2 text-white hover:cursor-default hover:!text-white'
 			>
 				<div className='flex flex-row space-x-2 '>
 					<Typography placeholder={''} variant='h3'>
@@ -67,7 +67,7 @@ const ProjectsDropdown = (props: any) => {
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='bg-black-default rounded-md text-secondary'
+							className='rounded-md bg-black-default text-secondary'
 						>
 							Typescript
 						</Button>
@@ -75,7 +75,7 @@ const ProjectsDropdown = (props: any) => {
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='bg-black-default rounded-md text-secondary'
+							className='rounded-md bg-black-default text-secondary'
 						>
 							Nextjs
 						</Button>
@@ -83,7 +83,7 @@ const ProjectsDropdown = (props: any) => {
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='bg-black-default rounded-md text-secondary'
+							className='rounded-md bg-black-default text-secondary'
 						>
 							Tailwind
 						</Button>
@@ -91,7 +91,7 @@ const ProjectsDropdown = (props: any) => {
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='bg-black-default rounded-md text-secondary'
+							className='rounded-md bg-black-default text-secondary'
 						>
 							React
 						</Button>
@@ -99,15 +99,15 @@ const ProjectsDropdown = (props: any) => {
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='bg-black-default rounded-md text-secondary'
+							className='rounded-md bg-black-default text-secondary'
 						>
 							React
 						</Button>
 					</div>
-					<IconButton size='sm' className='bg-secondary p-3'>
+					<IconButton placeholder={''} size='sm' className='bg-secondary p-3'>
 						<Github className='text-black-default' />
 					</IconButton>
-					<IconButton size='sm' className='bg-secondary p-3'>
+					<IconButton placeholder={''} size='sm' className='bg-secondary p-3'>
 						<Link className='text-black-default' />
 					</IconButton>
 				</div>

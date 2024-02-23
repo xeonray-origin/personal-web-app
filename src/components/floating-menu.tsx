@@ -52,55 +52,45 @@ const FloatingMenu = () => {
 					onClick={() => setOpen(!open)}
 					placeholder={''}
 					size='lg'
-					className='rounded-full !bg-secondary text-black focus:!bg-secondary  '
+					className='text-black rounded-full !bg-secondary focus:!bg-secondary  '
 				>
 					<PlusIcon className='h-5 w-5 transition-transform group-hover:rotate-45' />
 				</IconButton>
 			</SpeedDialHandler>
 			<SpeedDialContent placeholder={undefined}>
 				<SpeedDialAction
-					className={active === 'home' ? 'bg-secondary text-black' : ''}
+					className={active === 'home' ? 'text-black bg-secondary' : ''}
 					onClick={() => handleClick('home')}
 					placeholder={undefined}
 				>
 					<HomeIcon className='h-5 w-5' />
-					<Typography placeholder={''} {...labelProps}>
-						Home
-					</Typography>
+					Home
 				</SpeedDialAction>
 				<SpeedDialAction
-					className={active === 'projects' ? 'bg-secondary text-black' : ''}
+					className={active === 'projects' ? 'text-black bg-secondary' : ''}
 					onClick={() => handleClick('projects')}
 					placeholder={undefined}
 				>
 					<AppWindow className='h-5 w-5' />
-					<Typography placeholder={''} {...labelProps}>
-						Projects
-					</Typography>
+					Projects
 				</SpeedDialAction>
 				<SpeedDialAction
 					onClick={() => handleClick('contact')}
 					placeholder={undefined}
 				>
 					<Contact className='h-5 w-5' />
-					<Typography placeholder={''} {...labelProps}>
-						Contact
-					</Typography>
+					Contact
 				</SpeedDialAction>
 				<SpeedDialAction
 					onClick={() => handleClick('blogs')}
 					placeholder={undefined}
 				>
 					<Rss className='h-5 w-5' />
-					<Typography placeholder={''} {...labelProps}>
-						Blogs
-					</Typography>
+					Blogs
 				</SpeedDialAction>
 				<SpeedDialAction placeholder={undefined}>
 					<Save className='h-5 w-5' />
-					<Typography placeholder={''} {...labelProps}>
-						Download Resume
-					</Typography>
+					Download Resume
 				</SpeedDialAction>
 			</SpeedDialContent>
 		</SpeedDial>
