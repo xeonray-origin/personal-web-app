@@ -5,6 +5,12 @@
 @layer base {
 	* {
 		overscroll-behavior-y: none;
+		overscroll-behavior-x: none;
+	}
+	html,
+	body {
+		height: 100vh;
+		width: 100vw;
 	}
 }
 

@@ -91,23 +91,7 @@ const Sidebar = () => {
 					</ListItem>
 					<ListItem
 						selected={false}
-						onClick={() => setActive('about')}
-						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
-						placeholder={''}
-					>
-						<ListItemPrefix placeholder={''}>
-							<CircleUser />
-						</ListItemPrefix>
-						About me
-						{active === 'about' && (
-							<ListItemSuffix placeholder={''} className='text-secondary'>
-								<ChevronLeft />
-							</ListItemSuffix>
-						)}
-					</ListItem>
-					<ListItem
-						selected={false}
-						onClick={() => setActive('contact')}
+						onClick={() => handleClick('contact')}
 						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
 						placeholder={''}
 					>
@@ -143,26 +127,26 @@ const Sidebar = () => {
 				<IconButton
 					placeholder={''}
 					variant='outlined'
-					className='hover:text-black-default border-secondary text-secondary hover:bg-secondary'
+					className='hover:text-black-default border-secondary text-secondary subpixel-antialiased hover:bg-secondary'
 					size='sm'
 				>
-					<Github className='size-4' />
+					<Github className='size-4 subpixel-antialiased' />
 				</IconButton>
 				<IconButton
 					placeholder={''}
 					variant='outlined'
-					className='hover:text-black-default border-secondary text-secondary	hover:bg-secondary'
+					className='hover:text-black-default border-secondary text-secondary subpixel-antialiased	hover:bg-secondary'
 					size='sm'
 				>
-					<Linkedin className='size-4' />
+					<Linkedin className='size-4 subpixel-antialiased' />
 				</IconButton>
 				<IconButton
 					placeholder={''}
 					variant='outlined'
-					className='hover:text-black-default border-secondary text-secondary hover:bg-secondary'
+					className='hover:text-black-default border-secondary text-secondary subpixel-antialiased hover:bg-secondary'
 					size='sm'
 				>
-					<Instagram className='size-4' />
+					<Instagram className='size-4 subpixel-antialiased' />
 				</IconButton>
 			</div>
 		</div>

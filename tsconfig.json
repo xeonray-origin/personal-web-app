@@ -19,7 +19,8 @@
 		],
 		"paths": {
 			"@/*": ["./src/*"],
-			"@ui": ["./src/componsnets/ui"]
+			"@ui": ["./src/componsnets/ui"],
+			"@config": ["./src/config"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
