@@ -1,4 +1,20 @@
+import { home } from '@/config'
+
 import { Button, Typography } from './ui'
+
+const SpecialButton = (props: any) => {
+	const { text } = props
+	return (
+		<Button
+			ripple={false}
+			placeholder={''}
+			className='m-1 rounded-[0.3rem] border-[0.01rem]  !border-secondary  !border-secondary !border-opacity-20 bg-black-default p-3 font-normal normal-case text-secondary hover:bg-inherit'
+			variant='text'
+		>
+			{text}
+		</Button>
+	)
+}
 
 const Skills = () => {
 	return (
@@ -8,81 +24,12 @@ const Skills = () => {
 				className='text-md lg:text-lg'
 				variant='lead'
 			>
-				I write
+				Skills and Technology
 			</Typography>
 			<div className='pl-1'>
-				<Button
-					placeholder={''}
-					className='bg-black-default m-1  rounded-[0.3rem]  border-[0.01rem] !border-secondary !border-secondary !border-opacity-20 p-3 font-thin normal-case text-secondary'
-					variant='text'
-				>
-					HTML, CSS, Javascript
-				</Button>
-				<Button
-					placeholder={''}
-					className='bg-black-default m-1  rounded-[0.3rem]  border-[0.01rem] !border-secondary !border-opacity-20 p-3 font-thin normal-case text-secondary'
-					variant='text'
-				>
-					NodeJS
-				</Button>
-				<Button
-					placeholder={''}
-					className=' bg-black-default m-1  rounded-[0.3rem]  border-[0.01rem] !border-secondary !border-opacity-20 p-3 font-thin normal-case text-secondary'
-					variant='text'
-				>
-					ReactJS
-				</Button>
-
-				<Button
-					placeholder={''}
-					className='bg-black-default m-1  rounded-[0.3rem]  border-[0.01rem] !border-secondary !border-opacity-20 p-3 font-thin normal-case text-secondary'
-					variant='text'
-				>
-					ElectronJS
-				</Button>
-				<Button
-					placeholder={''}
-					className=' bg-black-default m-1  rounded-[0.3rem]  border-[0.01rem] !border-secondary !border-opacity-20 p-3 font-thin normal-case text-secondary'
-					variant='text'
-				>
-					ReactNative
-				</Button>
-				<Button
-					placeholder={''}
-					className='bg-black-default m-1  rounded-[0.3rem]  border-[0.01rem] !border-secondary !border-opacity-20 p-3 font-thin normal-case text-secondary'
-					variant='text'
-				>
-					MaterialUI
-				</Button>
-
-				<Button
-					placeholder={''}
-					className='bg-black-default m-1  rounded-[0.3rem]  border-[0.01rem] !border-secondary !border-opacity-20 p-3 font-thin normal-case text-secondary'
-					variant='text'
-				>
-					TailwindCSS
-				</Button>
-				<Button
-					placeholder={''}
-					className='bg-black-default m-1  rounded-[0.3rem]  border-[0.01rem] !border-secondary !border-opacity-20 p-3 font-thin normal-case text-secondary'
-					variant='text'
-				>
-					Python
-				</Button>
-				<Button
-					placeholder={''}
-					className='bg-black-default m-1  rounded-[0.3rem]  border-[0.01rem] !border-secondary !border-opacity-20 p-3 font-thin normal-case text-secondary'
-					variant='text'
-				>
-					NextJS
-				</Button>
-				<Button
-					placeholder={''}
-					className='bg-black-default m-1  rounded-[0.3rem]  border-[0.01rem] !border-secondary !border-opacity-20 p-3 font-thin normal-case text-secondary'
-					variant='text'
-				>
-					NestJS
-				</Button>
+				{home.skills.map((skill) => (
+					<SpecialButton text={skill} />
+				))}
 			</div>
 		</div>
 	)
