@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import {
 	AppWindow,
@@ -43,19 +44,17 @@ const Sidebar = () => {
 	}, [pathname])
 
 	return (
-		<div className='xs:max-md:relative bg-black-default fixed hidden h-[100vh] w-[14rem] lg:block'>
+		<div className='xs:max-md:relative fixed hidden h-[100vh] w-[14rem] bg-black-default lg:block'>
 			<div className='container mt-5  flex grow flex-row place-content-center'>
-				<Typography
-					placeholder={''}
-					className='items-center text-center font-bold text-white'
-					variant='lead'
-				>
-					Xeonray
-				</Typography>
-				<div className='ml-1 mt-[1.2rem] size-1 rounded-lg bg-secondary' />
+				<Image
+					height={120}
+					width={120}
+					alt='Not Found'
+					src={'/logo_light.svg'}
+				/>
 			</div>
 			<div className='mt-5 flex grow flex-row place-content-center'>
-				<List className='space-y-5 p-4' placeholder={''}>
+				<List className='space-y-1 p-4' placeholder={''}>
 					<ListItem
 						selected={false}
 						onClick={() => handleClick('home')}
@@ -89,7 +88,7 @@ const Sidebar = () => {
 							</ListItemSuffix>
 						)}
 					</ListItem>
-					<ListItem
+					{/* <ListItem
 						selected={false}
 						onClick={() => handleClick('contact')}
 						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
@@ -104,8 +103,8 @@ const Sidebar = () => {
 								<ChevronLeft />
 							</ListItemSuffix>
 						)}
-					</ListItem>
-					<ListItem
+					</ListItem> */}
+					{/* <ListItem
 						selected={false}
 						onClick={() => setActive('blogs')}
 						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
@@ -120,33 +119,27 @@ const Sidebar = () => {
 								<ChevronLeft />
 							</ListItemSuffix>
 						)}
-					</ListItem>
+					</ListItem> */}
 				</List>
 			</div>
 			<div className='absolute bottom-0 left-0 flex h-12 w-[100%] flex-row items-center justify-center gap-x-5 '>
 				<IconButton
 					placeholder={''}
 					variant='outlined'
-					className='hover:text-black-default border-secondary text-secondary subpixel-antialiased hover:bg-secondary'
+					onClick={() => window.open('https://github.com/xeonray-origin')}
+					className='border-secondary text-secondary subpixel-antialiased hover:bg-secondary hover:text-black-default'
 					size='sm'
 				>
 					<Github className='size-4 subpixel-antialiased' />
 				</IconButton>
 				<IconButton
 					placeholder={''}
+					onClick={() => window.open('https://www.linkedin.com/in/xeonray/')}
 					variant='outlined'
-					className='hover:text-black-default border-secondary text-secondary subpixel-antialiased	hover:bg-secondary'
+					className='border-secondary text-secondary subpixel-antialiased hover:bg-secondary	hover:text-black-default'
 					size='sm'
 				>
 					<Linkedin className='size-4 subpixel-antialiased' />
-				</IconButton>
-				<IconButton
-					placeholder={''}
-					variant='outlined'
-					className='hover:text-black-default border-secondary text-secondary subpixel-antialiased hover:bg-secondary'
-					size='sm'
-				>
-					<Instagram className='size-4 subpixel-antialiased' />
 				</IconButton>
 			</div>
 		</div>

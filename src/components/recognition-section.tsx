@@ -7,17 +7,29 @@ import { Accordion, AccordionBody, AccordionHeader, Typography } from './ui'
 
 const sampleData = [
 	{
-		header: 'Lorem Ipsum',
+		header: 'Hacker Rank React',
 		year: '2020',
-		description:
-			'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+		description: 'Certified React Developer',
 		icon: <ShieldCheck />,
 	},
 	{
-		header: 'Lorem Ipsum of Lorem',
+		header: 'Hacker Rank Javascript',
+		year: '2020',
+		description: 'Certified Javascript Developer.',
+		icon: <ShieldCheck />,
+	},
+	{
+		header: 'Best Team of the Quarter',
 		year: '2019',
 		description:
-			'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+			'I was recognized as a part the best team of the quarter for my contribution to the project.',
+		icon: <Medal />,
+	},
+	{
+		header: 'Star Performer',
+		year: '2019',
+		description:
+			'I was honored as the star performer of the year for my exceptional performance in the project.',
 		icon: <Medal />,
 	},
 ]
@@ -36,7 +48,7 @@ const RecognitionSection = () => {
 	return (
 		<div className='mt-[3rem] px-3 lg:px-0'>
 			<Typography placeholder={''} variant='lead'>
-				Recognition
+				Certifications and Recognitions
 			</Typography>
 			{sampleData.map((data, index) => {
 				return (
@@ -50,13 +62,17 @@ const RecognitionSection = () => {
 					>
 						<AccordionHeader
 							placeholder={''}
-							className='border-secondary text-[1rem] text-white text-opacity-60'
+							className='border-secondary text-[1rem] !text-white text-opacity-60'
 						>
-							{data.header}
-							{data.year}
+							{data.header} {data.year}
 						</AccordionHeader>
 						<AccordionBody clasName='text-secondary text-[1rem]'>
-							<Typography placeholder={''} variant='paragraph' color='white'>
+							<Typography
+								className='font-normal'
+								placeholder={''}
+								variant='paragraph'
+								color='white'
+							>
 								{data.description}
 							</Typography>
 						</AccordionBody>

@@ -1,4 +1,4 @@
-import { BellIcon, DollarSign, HomeIcon } from 'lucide-react'
+import { BellIcon, DollarSign, GraduationCap, HomeIcon } from 'lucide-react'
 
 import {
 	Timeline,
@@ -26,70 +26,39 @@ const EducationTimeline = () => {
 						<TimelineConnector />
 						<TimelineHeader>
 							<TimelineIcon className='p-2'>
-								<HomeIcon className='size-4' />
+								<GraduationCap />
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
 								variant='h5'
 								className='text-secondary'
 							>
-								Timeline Title Here.
+								University of Southampton, MS in Cybersecurity
 							</Typography>
 						</TimelineHeader>
 						<TimelineBody className='pb-8'>
 							<Typography placeholder={''} className='font-normal text-white'>
-								The key to more success is to have a lot of pillows. Put it this
-								way, it took me twenty five years to get these plants, twenty
-								five years of blood sweat and tears, and I&apos;m never giving
-								up, I&apos;m just getting started. I&apos;m up to something. Fan
-								luv.
-							</Typography>
-						</TimelineBody>
-					</TimelineItem>
-					<TimelineItem>
-						<TimelineConnector />
-						<TimelineHeader>
-							<TimelineIcon className='p-2'>
-								<BellIcon className='size-4' />
-							</TimelineIcon>
-							<Typography
-								placeholder={''}
-								variant='h5'
-								className='text-secondary'
-							>
-								Timeline Title Here.
-							</Typography>
-						</TimelineHeader>
-						<TimelineBody className='pb-8'>
-							<Typography placeholder={''} className='font-normal text-white'>
-								The key to more success is to have a lot of pillows. Put it this
-								way, it took me twenty five years to get these plants, twenty
-								five years of blood sweat and tears, and I&apos;m never giving
-								up, I&apos;m just getting started. I&apos;m up to something. Fan
-								luv.
+								2015-2016
 							</Typography>
 						</TimelineBody>
 					</TimelineItem>
 					<TimelineItem>
 						<TimelineHeader>
 							<TimelineIcon className='p-2'>
-								<DollarSign className='size-4' />
+								<GraduationCap />
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
 								variant='h5'
 								className='text-secondary'
 							>
-								Timeline Title Here.
+								West Bengal University of Technology, Bachelor of Computer
+								Application
 							</Typography>
 						</TimelineHeader>
-						<TimelineBody>
+						<TimelineBody className='pb-8'>
 							<Typography placeholder={''} className='font-normal text-white'>
-								The key to more success is to have a lot of pillows. Put it this
-								way, it took me twenty five years to get these plants, twenty
-								five years of blood sweat and tears, and I&apos;m never giving
-								up, I&apos;m just getting started. I&apos;m up to something. Fan
-								luv.
+								2011-2014
 							</Typography>
 						</TimelineBody>
 					</TimelineItem>

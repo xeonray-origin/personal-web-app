@@ -1,3 +1,6 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
 import { Github, Link } from 'lucide-react'
 
 import {
@@ -11,7 +14,7 @@ import {
 
 const ProjectHolder = () => (
 	<Accordion
-		className=' !min-h-[10rem] !rounded-md border-[0.1rem] border-secondary border-opacity-20 pb-2 shadow-sm'
+		className=' !min-h-[10rem] !rounded-md border-[0.1rem] border-secondary pb-2 shadow-sm'
 		placeholder={''}
 		open={true}
 	>
@@ -26,21 +29,24 @@ const ProjectHolder = () => (
 					className='font-medium'
 					variant='paragraph'
 				>
-					Weather App
+					city-weather-report
 				</Typography>
 			</div>
 			<Chip
 				size='sm'
-				className='hover:text-black-default !rounded-[0.2rem] border-secondary 
-				font-thin normal-case text-secondary hover:cursor-pointer hover:bg-secondary'
+				className='!rounded-[0.2rem] border-secondary font-normal 
+				normal-case text-secondary hover:cursor-pointer hover:bg-secondary hover:text-black-default'
 				variant='outlined'
 				icon={<Link size={'sm'} />}
 				value='Link'
 			/>
 			<Chip
 				size='sm'
-				className=' hover:text-black-default !rounded-[0.2rem] border-secondary 
-				font-thin normal-case text-secondary hover:cursor-pointer	hover:bg-secondary'
+				onTap={() =>
+					window.open('https://github.com/xeonray-origin/city-weather-report')
+				}
+				className=' !rounded-[0.2rem] border-secondary font-normal 
+				normal-case text-secondary hover:cursor-pointer hover:bg-secondary	hover:text-black-default'
 				icon={<Github size={'sm'} />}
 				value='Repo'
 				variant='outlined'
@@ -63,7 +69,7 @@ const ProjectHolder = () => (
 					size='sm'
 					placeholder={''}
 					variant='text'
-					className='bg-black-default  rounded-none font-thin normal-case text-secondary'
+					className='rounded-none  bg-black-default font-normal normal-case text-secondary'
 				>
 					Typescript
 				</Button>
@@ -71,7 +77,7 @@ const ProjectHolder = () => (
 					size='sm'
 					placeholder={''}
 					variant='text'
-					className='bg-black-default rounded-none  font-thin normal-case text-secondary'
+					className='rounded-none bg-black-default  font-normal normal-case text-secondary'
 				>
 					Nextjs
 				</Button>
@@ -79,7 +85,7 @@ const ProjectHolder = () => (
 					size='sm'
 					placeholder={''}
 					variant='text'
-					className='bg-black-default rounded-none  font-thin normal-case text-secondary'
+					className='rounded-none bg-black-default  font-normal normal-case text-secondary'
 				>
 					Tailwind
 				</Button>
@@ -87,7 +93,7 @@ const ProjectHolder = () => (
 					size='sm'
 					placeholder={''}
 					variant='text'
-					className='bg-black-default  rounded-none font-thin normal-case text-secondary'
+					className='rounded-none  bg-black-default font-normal normal-case text-secondary'
 				>
 					React
 				</Button>
@@ -95,7 +101,7 @@ const ProjectHolder = () => (
 					size='sm'
 					placeholder={''}
 					variant='text'
-					className='bg-black-default rounded-none  font-thin normal-case text-secondary'
+					className='rounded-none bg-black-default  font-normal normal-case text-secondary'
 				>
 					React
 				</Button>
@@ -103,7 +109,7 @@ const ProjectHolder = () => (
 					size='sm'
 					placeholder={''}
 					variant='text'
-					className='bg-black-default rounded-none  font-thin normal-case text-secondary'
+					className='rounded-none bg-black-default  font-normal normal-case text-secondary'
 				>
 					React
 				</Button>
@@ -113,6 +119,12 @@ const ProjectHolder = () => (
 )
 
 const Projects = () => {
+	const router = useRouter()
+
+	const handleClickAllProjects = () => {
+		router.push('/projects')
+	}
+
 	return (
 		<div className='mt-[2rem]'>
 			<div className='mt-2 flex items-start px-2 lg:px-0'>
@@ -127,8 +139,9 @@ const Projects = () => {
 				</div>
 
 				<Typography
+					onClick={handleClickAllProjects}
 					placeholder={''}
-					className='cursor-pointer text-nowrap text-end text-sm text-blue-500 lg:text-sm'
+					className='cursor-pointer text-nowrap text-end text-sm font-medium text-blue-500 lg:text-sm'
 					variant='paragraph'
 				>
 					See all projects
@@ -136,7 +149,7 @@ const Projects = () => {
 			</div>
 			<div className=' w-100 flex flex-col justify-center space-y-2 px-3 md:mx-2 lg:mx-0 lg:pl-2'>
 				<ProjectHolder />
-				<ProjectHolder />
+				{/* <ProjectHolder /> */}
 			</div>
 		</div>
 	)

@@ -1,4 +1,5 @@
-import { BellIcon, DollarSign, HomeIcon } from 'lucide-react'
+import Image from 'next/image'
+import { BellIcon, Building2, DollarSign, HomeIcon } from 'lucide-react'
 
 import {
 	Timeline,
@@ -26,23 +27,28 @@ const ExperienceTimeline = () => {
 						<TimelineConnector />
 						<TimelineHeader>
 							<TimelineIcon className='p-2'>
-								<HomeIcon className='size-4' />
+								<Building2 />
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
 								variant='h5'
 								className='text-secondary'
 							>
-								Timeline Title Here.
+								Senior Software Engineer at Optym
 							</Typography>
 						</TimelineHeader>
 						<TimelineBody className='pb-8'>
 							<Typography placeholder={''} className='font-normal text-white'>
-								The key to more success is to have a lot of pillows. Put it this
-								way, it took me twenty five years to get these plants, twenty
-								five years of blood sweat and tears, and I&apos;m never giving
-								up, I&apos;m just getting started. I&apos;m up to something. Fan
-								luv.
+								Worked on the application layer of optimizer for Southwest
+								Airlines. Created react components library to be used across
+								projects. Successfully delivered POCs to gain new clients.
+								Implemented AES encryption system for web application
+								Spearheaded development of SaaS and B2B applications related to
+								Logistics Optimization and Supply Chain Management and
+								implemented customized Gantt Scheduler Successfully optimized
+								workflows to enhance performance Mentored juniors on React and
+								development patterns Established secure coding practices Worked
+								on live maps, graphs and tracking features
 							</Typography>
 						</TimelineBody>
 					</TimelineItem>
@@ -50,46 +56,51 @@ const ExperienceTimeline = () => {
 						<TimelineConnector />
 						<TimelineHeader>
 							<TimelineIcon className='p-2'>
-								<BellIcon className='size-4' />
+								<Building2 />
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
 								variant='h5'
 								className='text-secondary'
 							>
-								Timeline Title Here.
+								Software Engineer at Razrlab
 							</Typography>
 						</TimelineHeader>
 						<TimelineBody className='pb-8'>
 							<Typography placeholder={''} className='font-normal text-white'>
-								The key to more success is to have a lot of pillows. Put it this
-								way, it took me twenty five years to get these plants, twenty
-								five years of blood sweat and tears, and I&apos;m never giving
-								up, I&apos;m just getting started. I&apos;m up to something. Fan
-								luv.
+								Mostly worked on the MERN stack application Created a PaaS
+								product that served 15 B2B clients from a single generator stack
+								Implemented custom RSA for secure sharing Worked on tracking
+								systems for the Dubai Police Implemented end-to-end encryption
+								system for secure communication using WebSockets Implementing
+								broker agents like RabbitMQ. Node server with caching and
+								microservices
 							</Typography>
 						</TimelineBody>
 					</TimelineItem>
 					<TimelineItem>
 						<TimelineHeader>
 							<TimelineIcon className='p-2'>
-								<DollarSign className='size-4' />
+								<Building2 />
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
 								variant='h5'
 								className='text-secondary'
 							>
-								Timeline Title Here.
+								Fullstack Developer | SME at Nat IT Solved, presently CBNITS
 							</Typography>
 						</TimelineHeader>
 						<TimelineBody>
 							<Typography placeholder={''} className='font-normal text-white'>
-								The key to more success is to have a lot of pillows. Put it this
-								way, it took me twenty five years to get these plants, twenty
-								five years of blood sweat and tears, and I&apos;m never giving
-								up, I&apos;m just getting started. I&apos;m up to something. Fan
-								luv.
+								Implemented UI workflow for interactive learning application on
+								ReactNative Created outlook add-in for seamless integration of
+								security features Implemented file encryption system Worked on
+								sharing and collaboration features Mentored juniors on creating
+								sustainable tech stack based on SOLID principles. Implemented
+								storage agnostic information rights management Established
+								successful SDLCs for multiple products Successfully created POCs
+								for gaining new clients
 							</Typography>
 						</TimelineBody>
 					</TimelineItem>
