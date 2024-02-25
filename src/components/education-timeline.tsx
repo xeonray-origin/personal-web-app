@@ -38,7 +38,11 @@ const EducationTimeline = () => {
 						</TimelineHeader>
 						<TimelineBody className='pb-8'>
 							<Typography placeholder={''} className='font-normal text-white'>
-								2015-2016
+								Exposure to live pentesting techniques and tools. Learned
+								indepth about cyberspace and cyber crimes. Learned about
+								cryptography. Exposure to Security Analysis lifecycle and
+								implementation strategies. The dissertation was about
+								demonstrating vulnerabilities of Near Field Communication
 							</Typography>
 						</TimelineBody>
 					</TimelineItem>
@@ -56,11 +60,7 @@ const EducationTimeline = () => {
 								Application
 							</Typography>
 						</TimelineHeader>
-						<TimelineBody className='pb-8'>
-							<Typography placeholder={''} className='font-normal text-white'>
-								2011-2014
-							</Typography>
-						</TimelineBody>
+						<TimelineBody className='pb-8'></TimelineBody>
 					</TimelineItem>
 				</Timeline>
 			</div>

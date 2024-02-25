@@ -37,16 +37,19 @@ const ProjectHolder = (props: any) => {
 						{name}
 					</Typography>
 				</div>
-				<Chip
-					size='sm'
-					onTap={() => window.open(link, '_blank')}
-					className='!rounded-[0.2rem] border-secondary font-normal 
-					normal-case text-secondary hover:cursor-pointer hover:bg-secondary
-				hover:text-black-default'
-					variant='outlined'
-					icon={<Link size={'sm'} />}
-					value='Link'
-				/>
+				{link && (
+					<Chip
+						size='sm'
+						onTap={() => window.open(link, '_blank')}
+						className='!rounded-[0.2rem] border-secondary font-normal 
+						normal-case text-secondary hover:cursor-pointer hover:bg-secondary
+					hover:text-black-default'
+						variant='outlined'
+						icon={<Link size={'sm'} />}
+						value='Link'
+					/>
+				)}
+
 				<Chip
 					size='sm'
 					onTap={() => window.open(repo, '_blank')}
@@ -63,15 +66,15 @@ const ProjectHolder = (props: any) => {
 				<div className=' w-full pl-2 pt-0'>
 					<Typography
 						placeholder={''}
-						className='text-xs font-medium'
+						className='text-balance text-xs font-medium'
 						variant='small'
 					>
 						{description}
 					</Typography>
 				</div>
 				<div
-					className='absolute bottom-0 left-0 right-0 flex w-full 
-					flex-row flex-wrap justify-end space-x-1'
+					className='absolute bottom-0 left-0 right-0 flex h-auto 
+					w-full flex-row flex-wrap justify-end space-x-1 p-1'
 				>
 					{tech.map((text: string) => (
 						<Button
@@ -122,6 +125,7 @@ const Projects = () => {
 			<div className=' w-100 flex flex-col justify-center space-y-2 px-3 md:mx-2 lg:mx-0 lg:pl-2'>
 				{home.projects.map((project) => (
 					<ProjectHolder
+						key={project.id}
 						name={project.name}
 						description={project.description}
 						link={project.link}
@@ -129,8 +133,6 @@ const Projects = () => {
 						tech={project.tech}
 					/>
 				))}
-
-				{/* <ProjectHolder /> */}
 			</div>
 		</div>
 	)
