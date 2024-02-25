@@ -26,7 +26,7 @@ const ExperienceTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-							<TimelineIcon className='bg-secondary p-2 p-2 text-black-default'>
+							<TimelineIcon className='bg-secondary p-2 text-black-default'>
 								<Building2 />
 							</TimelineIcon>
 							<Typography
