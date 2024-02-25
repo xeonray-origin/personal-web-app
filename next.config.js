@@ -1,10 +1,7 @@
 const settings = {
 	output: 'export',
-	experimental: {
-		outputStandalone: true,
-	},
 	compiler: {
-		removeConsole: false,
+		removeConsole: true,
 	},
 	devIndicators: {
 		buildActivity: false,
