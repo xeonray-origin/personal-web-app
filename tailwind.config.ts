@@ -2,16 +2,23 @@ import withMT from '@material-tailwind/react/utils/withMT'
 
 module.exports = withMT({
 	content: ['./src/**/*.{ts,tsx}'],
-
 	theme: {
-		darkMode: true,
+		darkMode: false,
 		colors: {
-			primary: '#10191d',
-			secondary: '#00dac6',
-			white: '#ffffff',
+			primary: {
+				dark: '#10191d',
+				default: '#f0f2f5',
+			},
+			secondary: {
+				dark: '#00dac6',
+				default: '#5e8081',
+			},
+			white: {
+				default: '#ffffff',
+			},
 			black: {
-				'default': '#0e171b',
-				'500': '#0E171B81',
+				default: '#e1e1e1',
+				dark: '#0E171B81',
 			},
 			warning: '#CB313B',
 			success: '#00DAC6',
@@ -29,9 +36,9 @@ module.exports = withMT({
 			'none': '0 0 rgb(0, 0 / 0, 0)',
 		},
 		fontFamily: {
-			sans: ['Poppins', 'sans-serif'],
-			serif: ['Poppins', 'serif'],
-			body: ['Poppins', 'sans-serif'],
+			sans: ['var(--font-poppins)'],
+			serif: ['var(--font-poppins)'],
+			body: ['var(--font-poppins)'],
 		},
 		screen: {
 			'xs': '340px',

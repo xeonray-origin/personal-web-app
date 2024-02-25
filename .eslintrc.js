@@ -35,8 +35,16 @@ const config = {
 		'@typescript-eslint/no-shadow': 'warn',
 		'tailwindcss/classnames-order': 'off',
 		'tailwindcss/no-custom-classname': 'off',
+		'tailwindcss/migration-from-tailwind-2': 'warn',
+		'@typescript-eslint/no-explicit-any': 'warn',
+		'@typescript-eslint/no-unsafe-assignment': 'warn',
+		'@typescript-eslint/no-unsafe-return': 'warn',
+		'react/jsx-key': 'warn',
+		'@typescript-eslint/no-unsafe-argument': 'warn',
+		'@typescript-eslint/no-unsafe-member-access': 'warn',
+		'@typescript-eslint/no-unsafe-call': 'warn',
+		'tailwindcss/no-contradicting-classname': 'warn',
 	},
-	inclues: ['./src/**/*', './next.config.js', './tailwind.config.ts'],
 }
 
 module.exports = config

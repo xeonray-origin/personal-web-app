@@ -1,17 +1,11 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { utils } from '@/lib'
-import {
-	AppWindow,
-	Contact,
-	Github,
-	HomeIcon,
-	PlusIcon,
-	Rss,
-	Save,
-} from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { AppWindow, HomeIcon, PlusIcon, Save } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
 import {
 	IconButton,
@@ -27,15 +21,12 @@ const FloatingMenu = () => {
 	const router = useRouter()
 	const pathname = usePathname()
 	const [open, setOpen] = useState(false)
-	const labelProps = {
-		variant: 'small',
-		className:
-			'absolute top-2/4 -left-2/4 -translate-y-2/4 -translate-x-3/4 font-normal bg-black-default p-1 text-white',
-	}
 
 	const handleClick = (name: string) => {
 		router.push(`/${name === 'home' ? '' : name}`, { scroll: false })
 	}
+
+	const { theme, setTheme } = useTheme()
 
 	useEffect(() => {
 		console.log(pathname)
@@ -47,36 +38,33 @@ const FloatingMenu = () => {
 	}, [pathname])
 
 	return (
-		<SpeedDial open={open} className='bg-white'>
+		<SpeedDial open={open} className='bg-white !z-50'>
 			<SpeedDialHandler>
 				<IconButton
 					onClick={() => setOpen(!open)}
 					placeholder={''}
 					size='lg'
-					className='text-black rounded-full !bg-secondary focus:!bg-secondary  '
+					className='rounded-full !bg-secondary-default text-black-default focus:!bg-secondary-default  '
 				>
-					<PlusIcon className='h-5 w-5 transition-transform group-hover:rotate-45' />
+					<PlusIcon className='size-5 transition-transform group-hover:rotate-45' />
 				</IconButton>
 			</SpeedDialHandler>
-			<SpeedDialContent placeholder={undefined}>
+			<SpeedDialContent>
 				<SpeedDialAction
-<<<<<<< HEAD
 					className={
 						active === 'home'
-							? 'text-black h-16 w-40 bg-secondary'
-							: 'h-16 w-40'
+							? '!bg-secondary-default text-white-default'
+							: 'border-secondary-default !bg-white-default dark:!bg-secondary-dark dark:!text-[#212121]'
 					}
-=======
-					className={active === 'home' ? 'text-black bg-secondary' : ''}
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 					onClick={() => handleClick('home')}
-					placeholder={undefined}
 				>
-					<HomeIcon className='h-5 w-5' />
-<<<<<<< HEAD
+					<HomeIcon className='size-4' />
 					<Typography
 						color='blue-gray'
-						className='text-xs font-normal'
+						className={cn(
+							'text-[0.5rem] font-bold dark:text-white-default',
+							active === 'home' ? 'text-white-default' : '!text-[#212121]',
+						)}
 						placeholder={undefined}
 					>
 						Home
@@ -85,60 +73,53 @@ const FloatingMenu = () => {
 				<SpeedDialAction
 					className={
 						active === 'projects'
-							? 'text-black h-16 w-40 bg-secondary'
-							: ' h-16 w-40'
+							? 'bg-secondary-default text-white-default'
+							: 'border-secondary-default !bg-white-default bg-opacity-10 dark:!bg-secondary-dark dark:!text-[#212121]'
 					}
-=======
-					Home
-				</SpeedDialAction>
-				<SpeedDialAction
-					className={active === 'projects' ? 'text-black bg-secondary' : ''}
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 					onClick={() => handleClick('projects')}
 					placeholder={undefined}
 				>
-					<AppWindow className='h-5 w-5' />
-<<<<<<< HEAD
+					<AppWindow className='size-4' />
 					<Typography
 						color='blue-gray'
-						className='text-xs font-normal'
+						className={cn(
+							'text-[0.5rem] font-bold dark:text-white-default',
+							active === 'projects' ? 'text-white-default' : '!text-[#212121]',
+						)}
 						placeholder={undefined}
 					>
 						Projects
 					</Typography>
-=======
-					Projects
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 				</SpeedDialAction>
 				<SpeedDialAction
 					onClick={utils.downloadResume}
-					className='h-16 w-40 md:hidden'
+					className='border-secondary-default !bg-white-default bg-opacity-10 dark:!bg-secondary-dark dark:!text-[#212121] md:hidden'
 					placeholder={undefined}
 				>
-<<<<<<< HEAD
-					<Save className='h-5 w-5' />
+					<Save className='size-4' />
 					<Typography
 						color='blue-gray'
-						className='text-xs font-normal'
+						className={cn('text-[0.5rem] font-bold dark:text-[#212121]')}
 						placeholder={undefined}
 					>
-						Download Resume
+						Resume
 					</Typography>
-=======
-					<Contact className='h-5 w-5' />
-					Contact
 				</SpeedDialAction>
 				<SpeedDialAction
-					onClick={() => handleClick('blogs')}
+					onClick={() =>
+						theme == 'dark' ? setTheme('light') : setTheme('dark')
+					}
+					className='border-secondary-default !bg-white-default bg-opacity-10 dark:!bg-secondary-dark dark:!text-[#212121] md:hidden'
 					placeholder={undefined}
 				>
-					<Rss className='h-5 w-5' />
-					Blogs
-				</SpeedDialAction>
-				<SpeedDialAction placeholder={undefined}>
-					<Save className='h-5 w-5' />
-					Download Resume
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
+					<Save className='size-4' />
+					<Typography
+						color='blue-gray'
+						className={cn('text-[0.5rem] font-bold dark:text-[#212121]')}
+						placeholder={undefined}
+					>
+						Dark
+					</Typography>
 				</SpeedDialAction>
 			</SpeedDialContent>
 		</SpeedDial>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<svg width="375" height="374.999991" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" version="1.0">
+ <defs>
+  <g id="svg_1"/>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <g fill="#e8e8e8" id="svg_2">
+   <g id="svg_3">
+    <g id="svg_4">
+     <path d="m100.69,168.2l27.57,0l4.9,-12.75l30.79,0l4.9,12.75l27.69,0l-35.04,-90.18l-25.76,0l-35.05,90.18zm37.88,-31.82l10.05,-27.96l10.05,27.96l-20.1,0zm0,0" fill="#3f3f3f" id="svg_5"/>
+    </g>
+   </g>
+  </g>
+  <g fill="#e8e8e8" id="svg_6" transform="matrix(1 0 0 1 0 0)">
+   <g id="svg_7" transform="translate(95.154087, 271.38422)">
+    <g id="svg_8">
+     <path d="m9.83,0l26.83,0l0,-26.43l10.09,0l13.28,26.43l30.42,0l-17.14,-31.34c9.83,-5.45 15.41,-15.28 15.41,-28.29c0,-20.59 -13.95,-33.34 -36.52,-33.34l-42.37,0l0,92.97zm26.3,-47.81l0,-23.24l12.48,0c8.5,0 13.15,4.11 13.15,11.55c0,7.44 -4.65,11.69 -13.15,11.69l-12.48,0zm0,0" fill="#3f3f3f" id="svg_9"/>
+    </g>
+   </g>
+  </g>
+  <g fill="#e8e8e8" id="svg_10">
+   <g id="svg_11">
+    <g id="svg_12">
+     <path d="m290.92,171.42l0,-26.56l-47.15,0l25.1,-17.93l0,-17.4l-24.97,-17.8l47.02,0l0,-26.56l-92.97,0l0,21.78l44.23,31.35l-44.23,31.21l0,21.91l92.97,0zm0,0" fill="#3f3f3f" id="svg_13"/>
+    </g>
+   </g>
+  </g>
+  <g fill="#e8e8e8" id="svg_14" transform="matrix(1 0 0 1 0 0)">
+   <g id="svg_15" transform="translate(289.522972, 227.742133)">
+    <g id="svg_16">
+     <path d="m0,-9.83l0,-26.83l-92.97,0l0,26.83l92.97,0zm0,0" fill="#3f3f3f" id="svg_17"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
