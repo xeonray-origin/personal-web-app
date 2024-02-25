@@ -14,9 +14,10 @@ import {
 } from './ui'
 
 const ProjectHolder = (props: any) => {
-	const { name, description, link, repo, tech } = props
+	const { name, description, link, repo, tech, key } = props
 	return (
 		<Accordion
+			key={key}
 			className=' !min-h-[10rem] !rounded-md border-[0.1rem] 
 			border-secondary pb-2 shadow-sm'
 			placeholder={''}
@@ -105,7 +106,7 @@ const Projects = () => {
 			<div className='mt-2 flex items-start px-2 lg:px-0'>
 				<div className='grow'>
 					<Typography
-						className='sm:text-md text-nowrap  text-sm  md:text-lg lg:text-lg'
+						className='sm:text-md text-md  text-nowrap  md:text-lg lg:text-lg'
 						placeholder={''}
 						variant='lead'
 					>
@@ -122,7 +123,7 @@ const Projects = () => {
 					See all projects
 				</Typography>
 			</div>
-			<div className=' w-100 flex flex-col justify-center space-y-2 px-3 md:mx-2 lg:mx-0 lg:pl-2'>
+			<div className=' w-100 mt-4 flex flex-col justify-center space-y-2 px-3 md:mx-2 lg:mx-0 lg:pl-2'>
 				{home.projects.map((project) => (
 					<ProjectHolder
 						key={project.id}
