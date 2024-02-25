@@ -6,7 +6,6 @@ const SpecialButton = (props: any) => {
 	const { text, key } = props
 	return (
 		<Button
-			key={key}
 			ripple={false}
 			placeholder={''}
 			className='border-[0.01rem m-1 rounded-[0.3rem] !border-secondary !border-opacity-20 bg-black-default p-3 font-normal normal-case text-secondary hover:cursor-default hover:bg-inherit'
