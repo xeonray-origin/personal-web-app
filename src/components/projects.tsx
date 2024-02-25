@@ -1,10 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-<<<<<<< HEAD
 import { home } from '@config'
-=======
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 import { Github, Link } from 'lucide-react'
 
 import {
@@ -16,26 +13,15 @@ import {
 	Typography,
 } from './ui'
 
-<<<<<<< HEAD
 const ProjectHolder = (props: any) => {
 	const { name, description, link, repo, tech } = props
 	return (
 		<Accordion
 			className=' !min-h-[10rem] !rounded-md border-[0.1rem] 
 			border-secondary pb-2 shadow-sm'
-=======
-const ProjectHolder = () => (
-	<Accordion
-		className=' !min-h-[10rem] !rounded-md border-[0.1rem] border-secondary pb-2 shadow-sm'
-		placeholder={''}
-		open={true}
-	>
-		<AccordionHeader
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 			placeholder={''}
 			open={true}
 		>
-<<<<<<< HEAD
 			<AccordionHeader
 				placeholder={''}
 				className='items-center space-x-1 border-b-0
@@ -72,37 +58,6 @@ const ProjectHolder = () => (
 					variant='outlined'
 				/>
 			</AccordionHeader>
-=======
-			<div className='grow'>
-				<Typography
-					placeholder={''}
-					className='font-medium'
-					variant='paragraph'
-				>
-					city-weather-report
-				</Typography>
-			</div>
-			<Chip
-				size='sm'
-				className='!rounded-[0.2rem] border-secondary font-normal 
-				normal-case text-secondary hover:cursor-pointer hover:bg-secondary hover:text-black-default'
-				variant='outlined'
-				icon={<Link size={'sm'} />}
-				value='Link'
-			/>
-			<Chip
-				size='sm'
-				onTap={() =>
-					window.open('https://github.com/xeonray-origin/city-weather-report')
-				}
-				className=' !rounded-[0.2rem] border-secondary font-normal 
-				normal-case text-secondary hover:cursor-pointer hover:bg-secondary	hover:text-black-default'
-				icon={<Github size={'sm'} />}
-				value='Repo'
-				variant='outlined'
-			/>
-		</AccordionHeader>
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 
 			<AccordionBody className='mt-2 flex flex-col border-none pt-0 text-white'>
 				<div className=' w-full pl-2 pt-0'>
@@ -118,7 +73,6 @@ const ProjectHolder = () => (
 					className='absolute bottom-0 left-0 right-0 flex w-full 
 					flex-row flex-wrap justify-end space-x-1'
 				>
-<<<<<<< HEAD
 					{tech.map((text: string) => (
 						<Button
 							size='sm'
@@ -135,65 +89,6 @@ const ProjectHolder = () => (
 		</Accordion>
 	)
 }
-=======
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry.
-				</Typography>
-			</div>
-			<div className='absolute bottom-0 left-0 right-0 flex w-full flex-row flex-wrap justify-end space-x-1'>
-				<Button
-					size='sm'
-					placeholder={''}
-					variant='text'
-					className='rounded-none  bg-black-default font-normal normal-case text-secondary'
-				>
-					Typescript
-				</Button>
-				<Button
-					size='sm'
-					placeholder={''}
-					variant='text'
-					className='rounded-none bg-black-default  font-normal normal-case text-secondary'
-				>
-					Nextjs
-				</Button>
-				<Button
-					size='sm'
-					placeholder={''}
-					variant='text'
-					className='rounded-none bg-black-default  font-normal normal-case text-secondary'
-				>
-					Tailwind
-				</Button>
-				<Button
-					size='sm'
-					placeholder={''}
-					variant='text'
-					className='rounded-none  bg-black-default font-normal normal-case text-secondary'
-				>
-					React
-				</Button>
-				<Button
-					size='sm'
-					placeholder={''}
-					variant='text'
-					className='rounded-none bg-black-default  font-normal normal-case text-secondary'
-				>
-					React
-				</Button>
-				<Button
-					size='sm'
-					placeholder={''}
-					variant='text'
-					className='rounded-none bg-black-default  font-normal normal-case text-secondary'
-				>
-					React
-				</Button>
-			</div>
-		</AccordionBody>
-	</Accordion>
-)
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 
 const Projects = () => {
 	const router = useRouter()
@@ -225,7 +120,6 @@ const Projects = () => {
 				</Typography>
 			</div>
 			<div className=' w-100 flex flex-col justify-center space-y-2 px-3 md:mx-2 lg:mx-0 lg:pl-2'>
-<<<<<<< HEAD
 				{home.projects.map((project) => (
 					<ProjectHolder
 						name={project.name}
@@ -236,9 +130,6 @@ const Projects = () => {
 					/>
 				))}
 
-=======
-				<ProjectHolder />
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 				{/* <ProjectHolder /> */}
 			</div>
 		</div>

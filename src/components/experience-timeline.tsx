@@ -26,11 +26,7 @@ const ExperienceTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-<<<<<<< HEAD
 							<TimelineIcon className='bg-secondary p-2 p-2 text-black-default'>
-=======
-							<TimelineIcon className='p-2'>
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 								<Building2 />
 							</TimelineIcon>
 							<Typography
@@ -59,11 +55,7 @@ const ExperienceTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-<<<<<<< HEAD
 							<TimelineIcon className='bg-secondary p-2 p-2 text-black-default'>
-=======
-							<TimelineIcon className='p-2'>
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 								<Building2 />
 							</TimelineIcon>
 							<Typography
@@ -88,11 +80,7 @@ const ExperienceTimeline = () => {
 					</TimelineItem>
 					<TimelineItem>
 						<TimelineHeader>
-<<<<<<< HEAD
 							<TimelineIcon className='bg-secondary p-2 text-black-default'>
-=======
-							<TimelineIcon className='p-2'>
->>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 								<Building2 />
 							</TimelineIcon>
 							<Typography
