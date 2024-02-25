@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
+import { utils } from '@/lib'
 import {
 	AppWindow,
 	Contact,
@@ -59,25 +60,71 @@ const FloatingMenu = () => {
 			</SpeedDialHandler>
 			<SpeedDialContent placeholder={undefined}>
 				<SpeedDialAction
+<<<<<<< HEAD
+					className={
+						active === 'home'
+							? 'text-black h-16 w-40 bg-secondary'
+							: 'h-16 w-40'
+					}
+=======
 					className={active === 'home' ? 'text-black bg-secondary' : ''}
+>>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 					onClick={() => handleClick('home')}
 					placeholder={undefined}
 				>
 					<HomeIcon className='h-5 w-5' />
+<<<<<<< HEAD
+					<Typography
+						color='blue-gray'
+						className='text-xs font-normal'
+						placeholder={undefined}
+					>
+						Home
+					</Typography>
+				</SpeedDialAction>
+				<SpeedDialAction
+					className={
+						active === 'projects'
+							? 'text-black h-16 w-40 bg-secondary'
+							: ' h-16 w-40'
+					}
+=======
 					Home
 				</SpeedDialAction>
 				<SpeedDialAction
 					className={active === 'projects' ? 'text-black bg-secondary' : ''}
+>>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 					onClick={() => handleClick('projects')}
 					placeholder={undefined}
 				>
 					<AppWindow className='h-5 w-5' />
+<<<<<<< HEAD
+					<Typography
+						color='blue-gray'
+						className='text-xs font-normal'
+						placeholder={undefined}
+					>
+						Projects
+					</Typography>
+=======
 					Projects
+>>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 				</SpeedDialAction>
 				<SpeedDialAction
-					onClick={() => handleClick('contact')}
+					onClick={utils.downloadResume}
+					className='h-16 w-40 md:hidden'
 					placeholder={undefined}
 				>
+<<<<<<< HEAD
+					<Save className='h-5 w-5' />
+					<Typography
+						color='blue-gray'
+						className='text-xs font-normal'
+						placeholder={undefined}
+					>
+						Download Resume
+					</Typography>
+=======
 					<Contact className='h-5 w-5' />
 					Contact
 				</SpeedDialAction>
@@ -91,6 +138,7 @@ const FloatingMenu = () => {
 				<SpeedDialAction placeholder={undefined}>
 					<Save className='h-5 w-5' />
 					Download Resume
+>>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 				</SpeedDialAction>
 			</SpeedDialContent>
 		</SpeedDial>

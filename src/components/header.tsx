@@ -1,9 +1,12 @@
 'use client'
 
+<<<<<<< HEAD
+import { Save } from 'lucide-react'
+=======
 import Image from 'next/image'
 import { Menu, Save } from 'lucide-react'
+>>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 
-import { FloatingMenu } from '.'
 import { Avatar, Button, Typography } from './ui'
 
 const Header = () => {
@@ -15,7 +18,10 @@ const Header = () => {
 	}
 
 	return (
-		<div className='w-100 rounded-2 rounded-2 flex h-[12rem] w-full flex-wrap bg-[url(/header.svg)] md:flex-row md:pl-3'>
+		<div
+			className={`w-100 rounded-2 rounded-2 flex h-[12rem] w-full 
+		flex-wrap bg-[url(/header.svg)] md:flex-row md:pl-3`}
+		>
 			<div className=' relative z-30 flex w-full items-center justify-center md:justify-start '>
 				<Avatar
 					className='top-[8rem] !size-[8rem]  border-2 border-white md:top-[9rem]'
@@ -24,7 +30,10 @@ const Header = () => {
 					placeholder={''}
 				/>
 			</div>
-			<div className='item-center justify-centerpt-5 mt-[7rem] h-[5rem] w-full pt-5 md:ml-2 md:mt-[4rem] md:flex md:justify-normal md:pt-1'>
+			<div
+				className={`item-center justify-centerpt-5 mt-[7rem] h-[5rem] 
+				w-full pt-5 md:ml-2 md:mt-[4rem] md:flex md:justify-normal md:pt-1`}
+			>
 				<div className='text-center md:ml-[8rem] md:grow md:text-left '>
 					<Typography
 						className=' truncate text-nowrap text-2xl text-white'
@@ -44,7 +53,15 @@ const Header = () => {
 				<Button
 					placeholder={''}
 					onClick={() => download()}
+<<<<<<< HEAD
+					className={`invisible mx-auto mt-8 flex items-center text-nowrap 
+					!rounded-none border-2 border-secondary font-medium normal-case 
+					text-secondary hover:bg-secondary hover:text-black-default 
+					md:visible md:float-end md:m-0 md:mr-2 md:mt-1 md:h-[3.3rem] 
+					md:!rounded-[0.1rem] lg:mr-0`}
+=======
 					className='invisible mx-auto mt-8 flex items-center text-nowrap !rounded-none border-none bg-secondary font-normal normal-case md:visible md:float-end md:m-0 md:mr-2 md:mt-1 md:h-[3.3rem] md:!rounded-[0.1rem] lg:mr-0'
+>>>>>>> 759029fe8012b9b6e700287ed6c8dfd24c4c08ef
 					size='lg'
 					variant='outlined'
 				>

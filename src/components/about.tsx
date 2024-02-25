@@ -2,6 +2,8 @@ import { home } from '@/config'
 
 import { Typography } from './ui'
 
+const SECTION_HEADER = 'About me'
+
 const About = () => {
 	return (
 		<div className='pr-1'>
@@ -10,7 +12,7 @@ const About = () => {
 				className='text-center md:text-left '
 				variant='lead'
 			>
-				About me
+				{SECTION_HEADER}
 			</Typography>
 			<Typography
 				className='text-center font-medium md:text-left'

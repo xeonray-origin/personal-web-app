@@ -1,3 +1,5 @@
+'use client'
+
 import { projects } from '@config'
 import { Github, Link } from 'lucide-react'
 
@@ -126,7 +128,7 @@ const Projects = () => {
 						className=' font-extrabold uppercase text-white text-opacity-20'
 						variant='h1'
 					>
-						Projects
+						COMING SOON
 					</Typography>
 				</div>
 				<div className='lg:gap-right-0 flex  !h-[100%] w-full flex-row flex-wrap gap-2 px-5 pb-3 pt-5 md:gap-1 lg:gap-y-3 lg:pr-0'>

@@ -1,6 +1,13 @@
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: Array<ClassValue>) {
-  return twMerge(clsx(inputs))
+	return twMerge(clsx(inputs))
+}
+
+export const downloadResume = () => {
+	const link = document.createElement('a')
+	link.download = `resume.pdf`
+	link.href = '/resume.pdf'
+	link.click()
 }
