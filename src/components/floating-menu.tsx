@@ -1,17 +1,9 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { utils } from '@/lib'
-import {
-	AppWindow,
-	Contact,
-	Github,
-	HomeIcon,
-	PlusIcon,
-	Rss,
-	Save,
-} from 'lucide-react'
+import { AppWindow, HomeIcon, PlusIcon, Save } from 'lucide-react'
 
 import {
 	IconButton,

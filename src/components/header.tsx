@@ -48,11 +48,7 @@ const Header = () => {
 				<Button
 					placeholder={''}
 					onClick={() => download()}
-					className={`invisible mx-auto mt-8 flex items-center text-nowrap 
-					!rounded-none border-2 border-secondary font-medium normal-case 
-					text-secondary hover:bg-secondary hover:text-black-default 
-					md:visible md:float-end md:m-0 md:mr-2 md:mt-1 md:h-[3.3rem] 
-					md:!rounded-[0.1rem] lg:mr-0`}
+					className='invisible mx-auto mt-8 flex items-center text-nowrap !rounded-none border-none bg-secondary font-normal normal-case md:visible md:float-end md:m-0 md:mr-2 md:mt-1 md:h-[3.3rem] md:!rounded-[0.1rem] lg:mr-0'
 					size='lg'
 					variant='outlined'
 				>
