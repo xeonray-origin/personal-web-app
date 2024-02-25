@@ -26,7 +26,8 @@ const ProjectCard = () => {
 }
 
 const ProjectsDropdown = (props: any) => {
-	const { title, longDescription, git, shortDescription, icon } = props
+	const { title, longDescription, git, link, shortDescription, icon, tech } =
+		props
 	return (
 		<Accordion
 			className='!h-full !rounded-[0.5rem] border-[0.1rem] border-secondary border-opacity-20  shadow-secondary'
@@ -41,14 +42,19 @@ const ProjectsDropdown = (props: any) => {
 					<Typography placeholder={''} variant='h3'>
 						{title}
 					</Typography>
-					<IconButton placeholder={''} className='bg-transparent'>
+					<IconButton
+						ripple={false}
+						placeholder={''}
+						size='lg'
+						className='bg-transparent '
+					>
 						{icon}
 					</IconButton>
 				</div>
 
 				<Typography
 					placeholder={''}
-					className='text-sm font-medium'
+					className='mt-5 text-sm font-medium'
 					variant='paragraph'
 				>
 					{shortDescription}
@@ -65,53 +71,43 @@ const ProjectsDropdown = (props: any) => {
 
 				<div className='!rounded-b-full-[0.3rem] absolute bottom-0 right-0 flex h-auto w-[100%] flex-row items-center justify-end gap-x-2 bg-secondary bg-opacity-15 px-2 py-1'>
 					<div className='item-center pt-auto grow flex-wrap space-x-1'>
-						<Button
-							size='sm'
-							placeholder={''}
-							variant='text'
-							className='rounded-md bg-black-default text-secondary'
-						>
-							Typescript
-						</Button>
-						<Button
-							size='sm'
-							placeholder={''}
-							variant='text'
-							className='rounded-md bg-black-default text-secondary'
-						>
-							Nextjs
-						</Button>
-						<Button
-							size='sm'
-							placeholder={''}
-							variant='text'
-							className='rounded-md bg-black-default text-secondary'
-						>
-							Tailwind
-						</Button>
-						<Button
-							size='sm'
-							placeholder={''}
-							variant='text'
-							className='rounded-md bg-black-default text-secondary'
-						>
-							React
-						</Button>
-						<Button
-							size='sm'
-							placeholder={''}
-							variant='text'
-							className='rounded-md bg-black-default text-secondary'
-						>
-							React
-						</Button>
+						{tech.map((value: string, index: any) => {
+							return (
+								<Button
+									disabled
+									key={index}
+									placeholder={''}
+									className='!rounded-[0.2rem] border-secondary bg-black-default 
+									font-normal normal-case text-secondary hover:cursor-pointer
+									hover:text-black-default'
+									variant='outlined'
+									size='sm'
+								>
+									{value}
+								</Button>
+							)
+						})}
 					</div>
-					<IconButton placeholder={''} size='sm' className='bg-secondary p-3'>
-						<Github className='text-black-default' />
-					</IconButton>
-					<IconButton placeholder={''} size='sm' className='bg-secondary p-3'>
-						<Link className='text-black-default' />
-					</IconButton>
+					{git && (
+						<IconButton
+							placeholder={''}
+							onClick={() => window.open(git, '_blank')}
+							size='sm'
+							className='bg-secondary p-3'
+						>
+							<Github className='text-black-default' />
+						</IconButton>
+					)}
+					{link && (
+						<IconButton
+							onClick={() => window.open(link, '_blank')}
+							placeholder={''}
+							size='sm'
+							className='bg-secondary p-3'
+						>
+							<Link className='text-black-default' />
+						</IconButton>
+					)}
 				</div>
 			</AccordionBody>
 		</Accordion>
@@ -128,13 +124,16 @@ const Projects = () => {
 						className=' font-extrabold uppercase text-white text-opacity-20'
 						variant='h1'
 					>
-						COMING SOON
+						Projects
 					</Typography>
 				</div>
-				<div className='lg:gap-right-0 flex  !h-[100%] w-full flex-row flex-wrap gap-2 px-5 pb-3 pt-5 md:gap-1 lg:gap-y-3 lg:pr-0'>
+				<div
+					className='lg:gap-right-0 flex w-full flex-row flex-wrap 
+				  gap-2 px-5 pb-3 pt-5 md:gap-1 lg:gap-y-3 lg:pr-0'
+				>
 					{projects.sampleData.map((data) => {
 						return (
-							<div className='h-auto min-h-[26rem] w-full lg:max-w-[49.6%]'>
+							<div className='h-auto min-h-[20rem] w-full lg:max-w-[49.6%]'>
 								<ProjectsDropdown key={data.id} {...data} />
 							</div>
 						)

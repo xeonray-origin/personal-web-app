@@ -60,10 +60,19 @@ export const projects = [
 	{
 		id: uniqid(),
 		name: 'City Weather Report',
-		description: `React application to display weather reports
-    of major cities in India.`,
+		description: `React application to display weather reports of major cities in India.`,
 		tech: ['React', 'MUI', 'OpenWeatherMap', 'Javascript, HTML, CSS'],
 		link: 'https://xeonray-origin.github.io/city-weather-report/',
 		repo: 'https://github.com/xeonray-origin/city-weather-report',
+	},
+	{
+		id: uniqid(),
+		name: 'Typescript Introspection',
+		description: `Recently, the Reflect buli-in object has been enabled for javascript 
+    to inspect shape and properties of an object. Even then Typescript which is a superset 
+    of javascript does not support this feature by default.`,
+		tech: ['Typescript', 'reflect-metadata'],
+		link: '',
+		repo: 'https://github.com/xeonray-origin/typescript-introspection',
 	},
 ]
