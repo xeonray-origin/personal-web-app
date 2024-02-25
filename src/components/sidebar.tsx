@@ -3,18 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
-import {
-	AppWindow,
-	ArrowLeftIcon,
-	ChevronLeft,
-	CircleUser,
-	Contact,
-	Github,
-	Home,
-	Instagram,
-	Linkedin,
-	Rss,
-} from 'lucide-react'
+import { AppWindow, ChevronLeft, Github, Home, Linkedin } from 'lucide-react'
 
 import {
 	IconButton,
@@ -22,7 +11,6 @@ import {
 	ListItem,
 	ListItemPrefix,
 	ListItemSuffix,
-	Typography,
 } from './ui'
 
 const Sidebar = () => {

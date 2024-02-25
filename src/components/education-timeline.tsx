@@ -25,7 +25,7 @@ const EducationTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-							<TimelineIcon className='p-2'>
+							<TimelineIcon className='bg-secondary p-2 text-black-default'>
 								<GraduationCap />
 							</TimelineIcon>
 							<Typography
@@ -44,7 +44,7 @@ const EducationTimeline = () => {
 					</TimelineItem>
 					<TimelineItem>
 						<TimelineHeader>
-							<TimelineIcon className='p-2'>
+							<TimelineIcon className='bg-secondary p-2 text-black-default'>
 								<GraduationCap />
 							</TimelineIcon>
 							<Typography

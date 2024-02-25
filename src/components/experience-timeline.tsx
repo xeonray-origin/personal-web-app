@@ -26,7 +26,7 @@ const ExperienceTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-							<TimelineIcon className='p-2'>
+							<TimelineIcon className='bg-secondary p-2 p-2 text-black-default'>
 								<Building2 />
 							</TimelineIcon>
 							<Typography
@@ -55,7 +55,7 @@ const ExperienceTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-							<TimelineIcon className='p-2'>
+							<TimelineIcon className='bg-secondary p-2 p-2 text-black-default'>
 								<Building2 />
 							</TimelineIcon>
 							<Typography
@@ -80,7 +80,7 @@ const ExperienceTimeline = () => {
 					</TimelineItem>
 					<TimelineItem>
 						<TimelineHeader>
-							<TimelineIcon className='p-2'>
+							<TimelineIcon className='bg-secondary p-2 text-black-default'>
 								<Building2 />
 							</TimelineIcon>
 							<Typography
