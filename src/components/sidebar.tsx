@@ -76,38 +76,6 @@ const Sidebar = () => {
 							</ListItemSuffix>
 						)}
 					</ListItem>
-					{/* <ListItem
-						selected={false}
-						onClick={() => handleClick('contact')}
-						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
-						placeholder={''}
-					>
-						<ListItemPrefix placeholder={''}>
-							<Contact />
-						</ListItemPrefix>
-						Contact me
-						{active === 'contact' && (
-							<ListItemSuffix placeholder={''} className='text-secondary'>
-								<ChevronLeft />
-							</ListItemSuffix>
-						)}
-					</ListItem> */}
-					{/* <ListItem
-						selected={false}
-						onClick={() => setActive('blogs')}
-						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
-						placeholder={''}
-					>
-						<ListItemPrefix placeholder={''}>
-							<Rss />
-						</ListItemPrefix>
-						Blogs
-						{active === 'blogs' && (
-							<ListItemSuffix placeholder={''} className='text-secondary'>
-								<ChevronLeft />
-							</ListItemSuffix>
-						)}
-					</ListItem> */}
 				</List>
 			</div>
 			<div className='absolute bottom-0 left-0 flex h-12 w-[100%] flex-row items-center justify-center gap-x-5 '>

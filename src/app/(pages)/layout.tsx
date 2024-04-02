@@ -1,12 +1,14 @@
+'use client'
+
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { lightTheme } from '@/styles'
 
-import { Button, ThemeProvider } from '@/components/ui'
+import { ThemeProvider } from '@/components/ui'
 
 import '@/styles/globals.css'
 
-import { FloatingMenu, Header, Sidebar } from '@/components'
+import { FloatingMenu, Sidebar } from '@/components'
 import { cn } from '@/lib/utils'
 
 const font = Poppins({
@@ -16,23 +18,25 @@ const font = Poppins({
 	variable: '--font-poppins',
 })
 
-export const metadata: Metadata = {
-	title: 'Amritendu Bhattacharjee',
-	applicationName: 'Amritendu Bhattacharjee',
-	authors: [{ name: 'Amritendu Bhattacharjee' }],
-	description: 'Software Developer | Cybersecurity Enthusiast',
-	icons: [
-		{ rel: 'icon', url: '/favicon.ico', type: 'image/x-icon', sizes: '48x48' },
-	],
-	generator:
-		'Amritendu Bhattacharjee, amritendu, bhattacharjee, software engineer, developer, fullstack developer, senior software engineer, optym, optym india, optym india pvt ltd, optym india pvt. ltd., optym india pvt. ltd., razrlab, cbnits, ',
-	robots: {
-		googleBot: {
-			follow: true,
-			index: true,
-		},
-	},
-}
+// export const metadata: Metadata = {
+// 	title: 'Amritendu Bhattacharjee',
+// 	applicationName: 'Amritendu Bhattacharjee',
+// 	authors: [{ name: 'Amritendu Bhattacharjee' }],
+// 	description: 'Software Developer | Cybersecurity Enthusiast',
+// 	icons: [
+// 		{ rel: 'icon', url: '/favicon.ico', type: 'image/x-icon', sizes: '48x48' },
+// 	],
+// 	generator: `Amritendu Bhattacharjee, amritendu, bhattacharjee, software engineer,
+// 		developer, fullstack developer, senior software engineer, optym, optym india,
+// 		optym india pvt ltd, optym india pvt. ltd., optym india pvt. ltd., razrlab,
+// 		cbnits, `,
+// 	robots: {
+// 		googleBot: {
+// 			follow: true,
+// 			index: true,
+// 		},
+// 	},
+// }
 
 export default function RootLayout({
 	children,
@@ -42,21 +46,15 @@ export default function RootLayout({
 	return (
 		<html className={font.variable} lang='en' suppressHydrationWarning>
 			<body className={cn('bg-background antialiased')}>
-				<ThemeProvider
-					value={{
-						theme: lightTheme,
-					}}
-				>
-					<div className='flex bg-primary'>
-						<Sidebar />
-						<div className=' w-100 h-[100%] max-w-[2400px]  bg-primary pb-20 pr-0 lg:ml-[14rem] lg:pr-5'>
-							{children}
-						</div>
-						<div className='fixed bottom-5 right-5 lg:hidden'>
-							<FloatingMenu />
-						</div>
+				<div className='flex bg-primary'>
+					<Sidebar />
+					<div className='w-100 h-[100%] max-w-[2400px] bg-primary pb-20 pr-0 lg:ml-[14rem] lg:pr-5'>
+						{children}
 					</div>
-				</ThemeProvider>
+					<div className='fixed bottom-5 right-5 lg:hidden'>
+						<FloatingMenu />
+					</div>
+				</div>
 			</body>
 		</html>
 	)

@@ -2,9 +2,8 @@ import withMT from '@material-tailwind/react/utils/withMT'
 
 module.exports = withMT({
 	content: ['./src/**/*.{ts,tsx}'],
-
 	theme: {
-		darkMode: true,
+		darkMode: 'class',
 		colors: {
 			primary: '#10191d',
 			secondary: '#00dac6',
