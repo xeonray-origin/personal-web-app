@@ -22,7 +22,7 @@ const Header = () => {
 		>
 			<div className=' relative z-30 flex w-full items-center justify-center md:justify-start '>
 				<Avatar
-					className='top-[8rem] !size-[8rem]  border-2 border-white md:top-[9rem]'
+					className='border-white top-[8rem]  !size-[8rem] border-2 md:top-[9rem]'
 					src='/photo.jpeg'
 					alt='avatar'
 					placeholder={''}
@@ -34,14 +34,14 @@ const Header = () => {
 			>
 				<div className='text-center md:ml-[8rem] md:grow md:text-left '>
 					<Typography
-						className=' truncate text-nowrap text-2xl text-white'
+						className=' text-white truncate text-nowrap text-2xl'
 						placeholder={''}
 						variant='h3'
 					>
 						Amritendu Bhattacharjee
 					</Typography>
 					<Typography
-						className='text-md md:text-md truncate text-nowrap text-white lg:text-lg'
+						className='text-md md:text-md text-white truncate text-nowrap lg:text-lg'
 						placeholder={''}
 						variant='lead'
 					>
@@ -51,11 +51,13 @@ const Header = () => {
 				<Button
 					placeholder={''}
 					onClick={() => download()}
-					className='invisible mx-auto mt-8 flex items-center text-nowrap !rounded-none border-none bg-secondary font-normal normal-case md:visible md:float-end md:m-0 md:mr-2 md:mt-1 md:h-[3.3rem] md:!rounded-[0.1rem] lg:mr-0'
+					className='invisible mx-auto mt-8 flex items-center text-nowrap !rounded-none border-none
+					bg-secondary-default font-normal normal-case !text-white-default dark:bg-secondary-dark dark:font-bold 
+				  dark:!text-black-dark md:visible md:float-end md:m-0	md:mr-2 md:mt-1 md:h-[3.3rem] md:!rounded-[0.1rem] lg:mr-0'
 					size='lg'
 					variant='outlined'
 				>
-					<Save />
+					<Save className='!text-white-default dark:!text-black-dark' />
 					Download Resume
 				</Button>
 			</div>

@@ -18,16 +18,16 @@ const ProjectHolder = (props: any) => {
 	return (
 		<Accordion
 			key={key}
-			className=' !min-h-[10rem] !rounded-md border-[0.1rem] 
-			border-secondary pb-2 shadow-sm'
+			className=' border-secondary !min-h-[10rem] !rounded-md 
+			border-[0.1rem] pb-2 shadow-sm'
 			placeholder={''}
 			open={true}
 		>
 			<AccordionHeader
 				placeholder={''}
-				className='items-center space-x-1 border-b-0
-		  !border-secondary p-1 pl-2 pr-0 text-white 
-			  hover:cursor-default hover:!text-white'
+				className='!border-secondary text-white hover:!text-white
+		    items-center space-x-1 border-b-0 p-1 pl-2 
+			  pr-0 hover:cursor-default'
 			>
 				<div className='grow'>
 					<Typography
@@ -42,8 +42,8 @@ const ProjectHolder = (props: any) => {
 					<Chip
 						size='sm'
 						onTap={() => window.open(link, '_blank')}
-						className='!rounded-[0.2rem] border-secondary font-normal 
-						normal-case text-secondary hover:cursor-pointer hover:bg-secondary
+						className='border-secondary text-secondary hover:bg-secondary 
+						!rounded-[0.2rem] font-normal normal-case hover:cursor-pointer
 					hover:text-black-default'
 						variant='outlined'
 						icon={<Link size={'sm'} />}
@@ -54,8 +54,8 @@ const ProjectHolder = (props: any) => {
 				<Chip
 					size='sm'
 					onTap={() => window.open(repo, '_blank')}
-					className=' !rounded-[0.2rem] border-secondary font-normal 
-					normal-case text-secondary hover:cursor-pointer hover:bg-secondary	
+					className=' border-secondary text-secondary hover:bg-secondary 
+					!rounded-[0.2rem] font-normal normal-case hover:cursor-pointer	
 					hover:text-black-default'
 					icon={<Github size={'sm'} />}
 					value='Repo'
@@ -63,7 +63,7 @@ const ProjectHolder = (props: any) => {
 				/>
 			</AccordionHeader>
 
-			<AccordionBody className='mt-2 flex flex-col border-none pt-0 text-white'>
+			<AccordionBody className='text-white mt-2 flex flex-col border-none pt-0'>
 				<div className=' w-full pl-2 pt-0'>
 					<Typography
 						placeholder={''}
@@ -82,8 +82,8 @@ const ProjectHolder = (props: any) => {
 							size='sm'
 							placeholder={''}
 							variant='text'
-							className='rounded-none  bg-black-default font-normal 
-							normal-case text-secondary'
+							className='text-secondary  rounded-none bg-black-default 
+							font-normal normal-case'
 						>
 							{text}
 						</Button>

@@ -39,13 +39,15 @@ const Sidebar = () => {
 	}, [pathname])
 	console.log('hello', theme)
 	return (
-		<div className='xs:max-md:relative fixed hidden h-[100vh] w-[14rem] !bg-secondary  lg:block'>
+		<div className='xs:max-md:relative !bg-secondary fixed hidden h-[100vh] w-[14rem]  lg:block'>
 			<div className='container mt-5  flex grow flex-row place-content-center'>
 				<Image
 					height={120}
 					width={120}
 					alt='Not Found'
-					src={theme === 'light' ? '/logo_dark.svg' : '/logo_light.svg'}
+					src={
+						theme === 'light' || !theme ? '/logo_dark.svg' : '/logo_light.svg'
+					}
 				/>
 			</div>
 			<div className='mt-5 flex grow flex-row place-content-center'>
@@ -53,7 +55,7 @@ const Sidebar = () => {
 					<ListItem
 						selected={false}
 						onClick={() => handleClick('home')}
-						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
+						className='rounded-1 text-white hover:bg-secondary focus:text-white focus:bg-transparent'
 					>
 						<ListItemPrefix>
 							<Home />
@@ -69,7 +71,7 @@ const Sidebar = () => {
 					<ListItem
 						selected={false}
 						onClick={() => handleClick('projects')}
-						className='rounded-1 text-white hover:bg-secondary focus:bg-transparent focus:text-white'
+						className='rounded-1 text-white hover:bg-secondary focus:text-white focus:bg-transparent'
 					>
 						<ListItemPrefix>
 							<AppWindow />
@@ -87,7 +89,7 @@ const Sidebar = () => {
 				<IconButton
 					variant='outlined'
 					onClick={() => window.open('https://github.com/xeonray-origin')}
-					className='border-secondary text-secondary subpixel-antialiased hover:bg-secondary hover:text-black-default'
+					className='border-secondary text-secondary hover:bg-secondary subpixel-antialiased hover:text-black-default'
 					size='sm'
 				>
 					<Github className='size-4 subpixel-antialiased' />
@@ -95,7 +97,7 @@ const Sidebar = () => {
 				<IconButton
 					onClick={() => window.open('https://www.linkedin.com/in/xeonray/')}
 					variant='outlined'
-					className='border-secondary text-secondary subpixel-antialiased hover:bg-secondary	hover:text-black-default'
+					className='border-secondary text-secondary hover:bg-secondary subpixel-antialiased	hover:text-black-default'
 					size='sm'
 				>
 					<Linkedin className='size-4 subpixel-antialiased' />
@@ -105,7 +107,7 @@ const Sidebar = () => {
 						theme == 'dark' ? setTheme('light') : setTheme('dark')
 					}
 					variant='outlined'
-					className='border-secondary text-secondary subpixel-antialiased hover:bg-secondary	hover:text-black-default'
+					className='border-secondary text-secondary hover:bg-secondary subpixel-antialiased	hover:text-black-default'
 					size='sm'
 				>
 					<Lightbulb className='size-4 subpixel-antialiased' />

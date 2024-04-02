@@ -11,7 +11,7 @@ module.exports = withMT({
 			},
 			secondary: {
 				dark: '#00dac6',
-				default: '#9db0ec',
+				default: '#5e8081',
 			},
 			white: {
 				default: '#ffffff',

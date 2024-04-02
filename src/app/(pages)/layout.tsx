@@ -24,7 +24,7 @@ export default function RootLayout({
 		<html className={font.variable} lang='en' suppressHydrationWarning>
 			<body className={cn('bg-background antialiased')}>
 				<ThemeProvider attribute='class' defaultTheme='light'>
-					<div className='dark:bg-black-dark flex bg-black-default'>
+					<div className='flex bg-black-default dark:bg-black-dark'>
 						<Sidebar />
 						<div className='w-100 h-[100%] max-w-[2400px] bg-primary-default pb-20 pr-0 dark:bg-primary-dark lg:ml-[14rem] lg:pr-5'>
 							{children}
