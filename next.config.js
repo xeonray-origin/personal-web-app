@@ -3,9 +3,7 @@ const settings = {
 	experimental: {
 		outputStandalone: true,
 	},
-	compiler: {
-		removeConsole: true,
-	},
+
 	devIndicators: {
 		buildActivity: false,
 	},

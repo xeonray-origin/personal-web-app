@@ -1,10 +1,13 @@
 'use client'
 
 import { Save } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
 import { Avatar, Button, Typography } from './ui'
 
 const Header = () => {
+	const { systemTheme, theme, setTheme } = useTheme()
+
 	const download = () => {
 		const link = document.createElement('a')
 		link.download = `resume.pdf`
@@ -15,7 +18,7 @@ const Header = () => {
 	return (
 		<div
 			className={`w-100 rounded-2 rounded-2 flex h-[12rem] w-full 
-		flex-wrap bg-[url(/header.svg)] md:flex-row md:pl-3`}
+		   flex-wrap bg-[url(/header_dark.svg)] dark:bg-[url(/header.svg)] md:flex-row md:pl-3`}
 		>
 			<div className=' relative z-30 flex w-full items-center justify-center md:justify-start '>
 				<Avatar

@@ -9,7 +9,9 @@ const SpecialButton = (props: any) => {
 			key={key}
 			ripple={false}
 			placeholder={''}
-			className='border-[0.01rem m-1 rounded-[0.3rem] !border-secondary !border-opacity-20 bg-black-default p-3 font-normal normal-case text-secondary hover:cursor-default hover:bg-inherit'
+			className='size-sm dark:bg-black-dark m-1 rounded-[0.3rem] border-[0.01rem] 
+			!border-secondary !border-opacity-20 bg-black-default p-3 font-normal normal-case text-secondary 
+			hover:cursor-default hover:bg-inherit'
 			variant='text'
 		>
 			{text}

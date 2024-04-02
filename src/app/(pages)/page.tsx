@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import {
 	About,
 	AcademicTimeline,
@@ -7,6 +8,26 @@ import {
 	RecognitionSection,
 	Skills,
 } from '@/components'
+
+export const metadata: Metadata = {
+	title: 'Amritendu Bhattacharjee',
+	applicationName: 'Amritendu Bhattacharjee',
+	authors: [{ name: 'Amritendu Bhattacharjee' }],
+	description: 'Software Developer | Cybersecurity Enthusiast',
+	icons: [
+		{ rel: 'icon', url: '/favicon.ico', type: 'image/x-icon', sizes: '48x48' },
+	],
+	generator: `Amritendu Bhattacharjee, amritendu, bhattacharjee, software engineer,
+		developer, fullstack developer, senior software engineer, optym, optym india,
+		optym india pvt ltd, optym india pvt. ltd., optym india pvt. ltd., razrlab,
+		cbnits,`,
+	robots: {
+		googleBot: {
+			follow: true,
+			index: true,
+		},
+	},
+}
 
 export default function Home() {
 	return (
