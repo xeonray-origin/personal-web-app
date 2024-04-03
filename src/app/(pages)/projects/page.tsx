@@ -82,15 +82,13 @@ const ProjectsDropdown = (props: any) => {
 					<Chip
 						size='sm'
 						variant='outlined'
-						onClick={() => window.open(link, '_blank')}
+						onTap={() => window.open(link, '_blank')}
 						className='text-secondary !rounded-[0.2rem] border-secondary-default 
 						font-normal normal-case hover:cursor-pointer hover:bg-secondary-default
 						hover:text-black-default'
 						icon={<Link size={'sm'} />}
 						value='Link'
-					>
-						<Link className='text-black-default' />
-					</Chip>
+					/>
 				)}
 			</div>
 		</Accordion>
