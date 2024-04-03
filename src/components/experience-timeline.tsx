@@ -26,7 +26,7 @@ const ExperienceTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-							<TimelineIcon className='bg-secondary p-2 text-black-default'>
+							<TimelineIcon className='bg-secondary-default p-2 text-black-default dark:bg-secondary-dark dark:text-black-dark'>
 								<Building2 />
 							</TimelineIcon>
 							<Typography
@@ -38,7 +38,7 @@ const ExperienceTimeline = () => {
 							</Typography>
 						</TimelineHeader>
 						<TimelineBody className='pb-8'>
-							<Typography placeholder={''} className='font-normal text-white'>
+							<Typography placeholder={''} className='text-white font-normal'>
 								Worked on the application layer of optimizer for Southwest
 								Airlines. Created react components library to be used across
 								projects. Successfully delivered POCs to gain new clients.
@@ -55,7 +55,7 @@ const ExperienceTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-							<TimelineIcon className='bg-secondary p-2 p-2 text-black-default'>
+							<TimelineIcon className='bg-secondary-default p-2 p-2 text-black-default dark:bg-secondary-dark dark:text-black-dark'>
 								<Building2 />
 							</TimelineIcon>
 							<Typography
@@ -67,7 +67,7 @@ const ExperienceTimeline = () => {
 							</Typography>
 						</TimelineHeader>
 						<TimelineBody className='pb-8'>
-							<Typography placeholder={''} className='font-normal text-white'>
+							<Typography placeholder={''} className='text-white font-normal'>
 								Mostly worked on the MERN stack application Created a PaaS
 								product that served 15 B2B clients from a single generator stack
 								Implemented custom RSA for secure sharing Worked on tracking
@@ -80,7 +80,7 @@ const ExperienceTimeline = () => {
 					</TimelineItem>
 					<TimelineItem>
 						<TimelineHeader>
-							<TimelineIcon className='bg-secondary p-2 text-black-default'>
+							<TimelineIcon className='bg-secondary-default p-2 text-black-default dark:bg-secondary-dark dark:text-black-dark'>
 								<Building2 />
 							</TimelineIcon>
 							<Typography
@@ -92,7 +92,7 @@ const ExperienceTimeline = () => {
 							</Typography>
 						</TimelineHeader>
 						<TimelineBody>
-							<Typography placeholder={''} className='font-normal text-white'>
+							<Typography placeholder={''} className='text-white font-normal'>
 								Implemented UI workflow for interactive learning application on
 								ReactNative Created outlook add-in for seamless integration of
 								security features Implemented file encryption system Worked on

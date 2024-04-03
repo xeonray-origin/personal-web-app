@@ -62,13 +62,13 @@ const RecognitionSection = () => {
 					>
 						<AccordionHeader
 							placeholder={''}
-							className='border-secondary text-[1rem] !text-white text-opacity-60'
+							className='border-secondary !text-black text-[1rem] dark:text-white-default'
 						>
 							{data.header} {data.year}
 						</AccordionHeader>
-						<AccordionBody clasName='text-secondary text-[1rem]'>
+						<AccordionBody>
 							<Typography
-								className='font-normal'
+								className='text-[0.8rem] font-normal text-black-dark dark:text-white-default'
 								placeholder={''}
 								variant='paragraph'
 								color='white'

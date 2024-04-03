@@ -18,8 +18,9 @@ const ProjectHolder = (props: any) => {
 	return (
 		<Accordion
 			key={key}
-			className=' border-secondary !min-h-[10rem] !rounded-md 
-			border-[0.1rem] pb-2 shadow-sm'
+			className=' !min-h-[10rem] !rounded-md border-[0.1rem] 
+			border-secondary-default shadow-md dark:border-secondary-dark 
+			dark:shadow-none'
 			placeholder={''}
 			open={true}
 		>
@@ -32,7 +33,7 @@ const ProjectHolder = (props: any) => {
 				<div className='grow'>
 					<Typography
 						placeholder={''}
-						className='font-medium'
+						className='font-bold'
 						variant='paragraph'
 					>
 						{name}
@@ -42,9 +43,9 @@ const ProjectHolder = (props: any) => {
 					<Chip
 						size='sm'
 						onTap={() => window.open(link, '_blank')}
-						className='border-secondary text-secondary hover:bg-secondary 
-						!rounded-[0.2rem] font-normal normal-case hover:cursor-pointer
-					hover:text-black-default'
+						className='border-secondary text-secondary !rounded-[0.2rem] 
+						font-normal normal-case hover:cursor-pointer hover:bg-secondary-default
+						hover:text-black-default'
 						variant='outlined'
 						icon={<Link size={'sm'} />}
 						value='Link'
@@ -54,9 +55,9 @@ const ProjectHolder = (props: any) => {
 				<Chip
 					size='sm'
 					onTap={() => window.open(repo, '_blank')}
-					className=' border-secondary text-secondary hover:bg-secondary 
-					!rounded-[0.2rem] font-normal normal-case hover:cursor-pointer	
-					hover:text-black-default'
+					className=' border-secondary text-secondary !rounded-[0.2rem]
+					font-normal normal-case hover:cursor-pointer hover:bg-secondary-default 
+					hover:text-black-default dark:hover:bg-secondary-dark'
 					icon={<Github size={'sm'} />}
 					value='Repo'
 					variant='outlined'
@@ -75,15 +76,17 @@ const ProjectHolder = (props: any) => {
 				</div>
 				<div
 					className='absolute bottom-0 left-0 right-0 flex h-auto 
-					w-full flex-row flex-wrap justify-end space-x-1 p-1'
+					w-full flex-row flex-wrap justify-end p-1'
 				>
 					{tech.map((text: string) => (
 						<Button
 							size='sm'
+							ripple={false}
 							placeholder={''}
 							variant='text'
-							className='text-secondary  rounded-none bg-black-default 
-							font-normal normal-case'
+							className='text-secondary m-[0.1rem] rounded-[2px] bg-black-default !p-[0.3rem] 
+							text-[0.6rem] font-normal normal-case hover:cursor-default hover:bg-black-default
+							dark:bg-black-dark'
 						>
 							{text}
 						</Button>

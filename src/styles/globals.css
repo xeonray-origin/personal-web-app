@@ -14,11 +14,3 @@
 	}
 }
 
-@layer base {
-	:root {
-		--primary: #f3f4f6;
-	}
-	:dark {
-		--primary: #111827;
-	}
-}

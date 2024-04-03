@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
+import { sidebarConfig } from '@/config'
 import {
 	AppWindow,
 	ChevronLeft,
@@ -19,13 +20,37 @@ import {
 	ListItem,
 	ListItemPrefix,
 	ListItemSuffix,
+	Typography,
 } from './ui'
+
+const SidebarListItem = (props: any) => {
+	const { handleClick, active, page, icon } = props
+	return (
+		<ListItem
+			selected={false}
+			onClick={() => handleClick(page)}
+			className='rounded-1  hover:bg-secondary-default focus:bg-[transparent]'
+		>
+			<ListItemPrefix className='dark:text-white-default'>
+				{icon}
+			</ListItemPrefix>
+			<Typography className='capitalize dark:text-white-default' variant='h6'>
+				{page}
+			</Typography>
+			{active === page && (
+				<ListItemSuffix className='text-seconday-default dark:text-secondary-dark'>
+					<ChevronLeft />
+				</ListItemSuffix>
+			)}
+		</ListItem>
+	)
+}
 
 const Sidebar = () => {
 	const [active, setActive] = useState('home')
 	const router = useRouter()
 	const pathname = usePathname()
-	const { systemTheme, theme, setTheme } = useTheme()
+	const { theme, setTheme } = useTheme()
 	const handleClick = (name: string) => {
 		router.push(`/${name === 'home' ? '' : name}`, { scroll: false })
 	}
@@ -37,7 +62,7 @@ const Sidebar = () => {
 			setActive(pathname.replace('/', ''))
 		}
 	}, [pathname])
-	console.log('hello', theme)
+
 	return (
 		<div className='xs:max-md:relative !bg-secondary fixed hidden h-[100vh] w-[14rem]  lg:block'>
 			<div className='container mt-5  flex grow flex-row place-content-center'>
@@ -52,37 +77,14 @@ const Sidebar = () => {
 			</div>
 			<div className='mt-5 flex grow flex-row place-content-center'>
 				<List className='space-y-1 p-4'>
-					<ListItem
-						selected={false}
-						onClick={() => handleClick('home')}
-						className='rounded-1 text-white hover:bg-secondary focus:text-white focus:bg-transparent'
-					>
-						<ListItemPrefix>
-							<Home />
-							<div className='' />
-						</ListItemPrefix>
-						Home
-						{active === 'home' && (
-							<ListItemSuffix className='text-secondary'>
-								<ChevronLeft />
-							</ListItemSuffix>
-						)}
-					</ListItem>
-					<ListItem
-						selected={false}
-						onClick={() => handleClick('projects')}
-						className='rounded-1 text-white hover:bg-secondary focus:text-white focus:bg-transparent'
-					>
-						<ListItemPrefix>
-							<AppWindow />
-						</ListItemPrefix>
-						My Projects
-						{active === 'projects' && (
-							<ListItemSuffix className='text-secondary'>
-								<ChevronLeft />
-							</ListItemSuffix>
-						)}
-					</ListItem>
+					{sidebarConfig.pages.map((page) => (
+						<SidebarListItem
+							active={active}
+							handleClick={handleClick}
+							page={page.link}
+							icon={page.icon}
+						/>
+					))}
 				</List>
 			</div>
 			<div className='absolute bottom-0 left-0 flex h-12 w-[100%] flex-row items-center justify-center gap-x-5 '>
