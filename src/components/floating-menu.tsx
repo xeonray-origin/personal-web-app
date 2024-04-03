@@ -3,7 +3,9 @@
 import { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { utils } from '@/lib'
+import { cn } from '@/lib/utils'
 import { AppWindow, HomeIcon, PlusIcon, Save } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
 import {
 	IconButton,
@@ -19,15 +21,12 @@ const FloatingMenu = () => {
 	const router = useRouter()
 	const pathname = usePathname()
 	const [open, setOpen] = useState(false)
-	const labelProps = {
-		variant: 'small',
-		className:
-			'absolute top-2/4 -left-2/4 -translate-y-2/4 -translate-x-3/4 font-normal bg-black-default p-1 text-white',
-	}
 
 	const handleClick = (name: string) => {
 		router.push(`/${name === 'home' ? '' : name}`, { scroll: false })
 	}
+
+	const { theme, setTheme } = useTheme()
 
 	useEffect(() => {
 		console.log(pathname)
@@ -45,7 +44,7 @@ const FloatingMenu = () => {
 					onClick={() => setOpen(!open)}
 					placeholder={''}
 					size='lg'
-					className='text-black rounded-full !bg-secondary focus:!bg-secondary  '
+					className='rounded-full !bg-secondary-default text-black-default focus:!bg-secondary-default  '
 				>
 					<PlusIcon className='h-5 w-5 transition-transform group-hover:rotate-45' />
 				</IconButton>
@@ -54,16 +53,19 @@ const FloatingMenu = () => {
 				<SpeedDialAction
 					className={
 						active === 'home'
-							? 'text-black h-16 w-40 bg-secondary'
-							: 'h-16 w-40'
+							? 'bg-secondary-default text-white-default'
+							: 'border-secondary-default bg-white-default bg-opacity-10 dark:bg-secondary-dark'
 					}
 					onClick={() => handleClick('home')}
 					placeholder={undefined}
 				>
-					<HomeIcon className='h-5 w-5' />
+					<HomeIcon className='size-[1rem]' />
 					<Typography
 						color='blue-gray'
-						className='text-xs font-normal'
+						className={cn(
+							'text-[0.5rem] font-bold dark:text-white-default',
+							active === 'home' ? 'text-white-default' : '',
+						)}
 						placeholder={undefined}
 					>
 						Home
@@ -72,16 +74,19 @@ const FloatingMenu = () => {
 				<SpeedDialAction
 					className={
 						active === 'projects'
-							? 'text-black h-16 w-40 bg-secondary'
-							: ' h-16 w-40'
+							? 'bg-secondary-default text-white-default'
+							: 'border-secondary-default bg-white-default bg-opacity-10 dark:bg-secondary-dark'
 					}
 					onClick={() => handleClick('projects')}
 					placeholder={undefined}
 				>
-					<AppWindow className='h-5 w-5' />
+					<AppWindow className='size-[1rem]' />
 					<Typography
 						color='blue-gray'
-						className='text-xs font-normal'
+						className={cn(
+							'text-[0.5rem] font-bold dark:text-white-default',
+							active === 'projects' ? 'text-white-default' : '',
+						)}
 						placeholder={undefined}
 					>
 						Projects
@@ -89,16 +94,32 @@ const FloatingMenu = () => {
 				</SpeedDialAction>
 				<SpeedDialAction
 					onClick={utils.downloadResume}
-					className='h-16 w-40 md:hidden'
+					className='border-secondary-default bg-white-default bg-opacity-10 dark:bg-secondary-dark md:hidden'
 					placeholder={undefined}
 				>
-					<Save className='h-5 w-5' />
+					<Save className='size-[1rem]' />
 					<Typography
 						color='blue-gray'
-						className='text-xs font-normal'
+						className={cn('text-[0.5rem] font-bold dark:text-white-default')}
 						placeholder={undefined}
 					>
-						Download Resume
+						Resume
+					</Typography>
+				</SpeedDialAction>
+				<SpeedDialAction
+					onClick={() =>
+						theme == 'dark' ? setTheme('light') : setTheme('dark')
+					}
+					className='border-secondary-default bg-white-default bg-opacity-10 dark:bg-secondary-dark md:hidden'
+					placeholder={undefined}
+				>
+					<Save className='size-[1rem]' />
+					<Typography
+						color='blue-gray'
+						className={cn('text-[0.5rem] font-bold dark:text-white-default')}
+						placeholder={undefined}
+					>
+						Dark
 					</Typography>
 				</SpeedDialAction>
 			</SpeedDialContent>
