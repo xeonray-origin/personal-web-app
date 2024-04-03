@@ -14,7 +14,7 @@ const EducationTimeline = () => {
 	return (
 		<div className='mt-[2rem]'>
 			<Typography
-				className='mt-[1rem] text-center md:text-left'
+				className='mt-[1rem] text-center font-bold md:text-left'
 				placeholder={''}
 				variant='lead'
 			>
@@ -25,13 +25,16 @@ const EducationTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-							<TimelineIcon className='bg-secondary-default p-2 text-black-default text-black-default dark:bg-secondary-dark dark:text-black-dark'>
+							<TimelineIcon
+								className='bg-secondary-default p-2 text-black-default 
+								dark:bg-secondary-dark dark:text-black-dark'
+							>
 								<GraduationCap />
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
 								variant='h5'
-								className='text-secondary'
+								className='font-bold text-secondary-default'
 							>
 								University of Southampton, MS in Cybersecurity
 							</Typography>
@@ -48,13 +51,16 @@ const EducationTimeline = () => {
 					</TimelineItem>
 					<TimelineItem>
 						<TimelineHeader>
-							<TimelineIcon className='bg-secondary-default p-2 text-black-default text-black-default dark:bg-secondary-dark dark:text-black-dark'>
+							<TimelineIcon
+								className='bg-secondary-default p-2 text-black-default
+								dark:bg-secondary-dark dark:text-black-dark'
+							>
 								<GraduationCap />
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
 								variant='h5'
-								className='text-secondary'
+								className='font-bold text-secondary-default'
 							>
 								West Bengal University of Technology, Bachelor of Computer
 								Application

@@ -5,6 +5,7 @@ export const sampleData = [
 	{
 		id: uniqid(),
 		icon: <CloudDrizzle />,
+		imgUrl: '/city-weather.png',
 		title: 'City Weather Report',
 		shortDescription: `React application to display weather reports of major cities in India.`,
 		tech: ['React', 'MUI', 'OpenWeatherMap', 'Javascript, HTML, CSS'],
@@ -15,6 +16,7 @@ export const sampleData = [
 		id: uniqid(),
 		icon: <Type />,
 		title: 'Typescript Introspection',
+		imgUrl: '/introspection.png',
 		shortDescription: `Recently, the Reflect buli-in object has been enabled for javascript 
     to inspect shape and properties of an object. Even then Typescript which is a superset 
     of javascript does not support this feature by default.`,

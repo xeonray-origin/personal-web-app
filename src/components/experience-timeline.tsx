@@ -15,7 +15,7 @@ const ExperienceTimeline = () => {
 	return (
 		<div className='mt-[2rem]'>
 			<Typography
-				className='mt-[1rem] text-center md:text-left'
+				className='mt-[1rem] text-center font-bold md:text-left'
 				placeholder={''}
 				variant='lead'
 			>
@@ -31,8 +31,8 @@ const ExperienceTimeline = () => {
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
-								variant='h5'
-								className='text-secondary'
+								variant='lead'
+								className='font-bold text-secondary-default'
 							>
 								Senior Software Engineer at Optym
 							</Typography>
@@ -60,8 +60,8 @@ const ExperienceTimeline = () => {
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
-								variant='h5'
-								className='text-secondary'
+								variant='lead'
+								className='font-bold text-secondary-default'
 							>
 								Software Engineer at Razrlab
 							</Typography>
@@ -85,8 +85,8 @@ const ExperienceTimeline = () => {
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
-								variant='h5'
-								className='text-secondary'
+								variant='lead'
+								className='font-bold text-secondary-default'
 							>
 								Fullstack Developer | SME at Nat IT Solved, presently CBNITS
 							</Typography>

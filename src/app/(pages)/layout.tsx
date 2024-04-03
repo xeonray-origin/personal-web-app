@@ -4,7 +4,7 @@ import { Poppins } from 'next/font/google'
 
 import '@/styles/globals.css'
 
-import { FloatingMenu, Sidebar } from '@/components'
+import { FloatingMenu, Header, Sidebar } from '@/components'
 import { cn } from '@/lib/utils'
 import { ThemeProvider, useTheme } from 'next-themes'
 
@@ -24,9 +24,10 @@ export default function RootLayout({
 		<html className={font.variable} lang='en' suppressHydrationWarning>
 			<body className={cn('bg-background antialiased')}>
 				<ThemeProvider attribute='class' defaultTheme='light'>
-					<div className='flex bg-black-default dark:bg-black-dark'>
+					<div className='h-[100vh] w-[100%] bg-black-default dark:bg-black-dark'>
 						<Sidebar />
-						<div className='w-100 h-[100%] max-w-[2400px] bg-primary-default pb-20 pr-0 dark:bg-primary-dark lg:ml-[14rem] lg:pr-5'>
+						<div className='h-[100%] max-w-[2400px] overflow-y-auto bg-primary-default pb-20 pr-0 dark:bg-primary-dark lg:ml-[14rem] lg:pr-5'>
+							<Header />
 							{children}
 						</div>
 						<div className='fixed bottom-5 right-5 lg:hidden'>

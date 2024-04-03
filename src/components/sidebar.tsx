@@ -91,7 +91,9 @@ const Sidebar = () => {
 				<IconButton
 					variant='outlined'
 					onClick={() => window.open('https://github.com/xeonray-origin')}
-					className='border-secondary text-secondary hover:bg-secondary subpixel-antialiased hover:text-black-default'
+					className='border-2 border-secondary-default text-secondary-default subpixel-antialiased 
+					hover:bg-secondary-default hover:text-white-default dark:border-secondary-dark 
+					dark:text-secondary-dark dark:hover:bg-secondary-dark dark:hover:text-white-default'
 					size='sm'
 				>
 					<Github className='size-4 subpixel-antialiased' />
@@ -99,7 +101,9 @@ const Sidebar = () => {
 				<IconButton
 					onClick={() => window.open('https://www.linkedin.com/in/xeonray/')}
 					variant='outlined'
-					className='border-secondary text-secondary hover:bg-secondary subpixel-antialiased	hover:text-black-default'
+					className='border-2 border-secondary-default text-secondary-default subpixel-antialiased 
+					hover:bg-secondary-default hover:text-white-default dark:border-secondary-dark 
+					dark:text-secondary-dark dark:hover:bg-secondary-dark dark:hover:text-white-default'
 					size='sm'
 				>
 					<Linkedin className='size-4 subpixel-antialiased' />
@@ -109,7 +113,9 @@ const Sidebar = () => {
 						theme == 'dark' ? setTheme('light') : setTheme('dark')
 					}
 					variant='outlined'
-					className='border-secondary text-secondary hover:bg-secondary subpixel-antialiased	hover:text-black-default'
+					className='border-2 border-secondary-default text-secondary-default subpixel-antialiased 
+					hover:bg-secondary-default hover:text-white-default dark:border-secondary-dark 
+					dark:text-secondary-dark dark:hover:bg-secondary-dark dark:hover:text-white-default'
 					size='sm'
 				>
 					<Lightbulb className='size-4 subpixel-antialiased' />

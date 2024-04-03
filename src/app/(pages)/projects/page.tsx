@@ -1,125 +1,110 @@
 'use client'
 
+import { useMemo } from 'react'
 import { projects } from '@config'
 import { Github, Link } from 'lucide-react'
 
 import {
 	Accordion,
-	AccordionBody,
-	AccordionHeader,
 	Button,
+	Chip,
 	IconButton,
 	Typography,
 } from '@/components/ui'
 
 const ProjectsDropdown = (props: any) => {
-	const { title, longDescription, git, link, shortDescription, icon, tech } =
+	const { title, longDescription, git, link, shortDescription, tech, imgUrl } =
 		props
+
 	return (
 		<Accordion
-			className='!h-full !rounded-[0.5rem] border-[0.1rem] border-secondary
-			border-opacity-20 shadow-secondary'
+			className=' m-1 !h-[20rem] w-[100%] !rounded-md border-[0.1rem] border-secondary-default
+			shadow-md dark:border-secondary-dark dark:shadow-none lg:w-[42rem]'
 			open={true}
 		>
-			<AccordionHeader
-				className='flex flex-row flex-wrap !rounded-[0.5rem] border-b-0 
-			!border-secondary bg-black-default pl-2 text-white hover:cursor-default
-			hover:!text-white'
+			<div
+				className='text-white hover:!text-white flex h-[89%] flex-row 
+				flex-wrap !rounded-t-[0.5rem] !border-none !border-none bg-white-default
+				pl-2 hover:cursor-default dark:bg-black-dark'
 			>
 				{title && shortDescription && (
-					<>
-						<div className='flex flex-row space-x-2 '>
-							<Typography variant='h3'>{title}</Typography>
-							<IconButton ripple={false} size='lg' className='bg-transparent '>
-								{icon}
-							</IconButton>
+					<div className='w-[60%] pr-1'>
+						<div className='mt-2 inline-block flex space-x-2 align-middle'>
+							<Typography className='align-middle' variant='h3'>
+								{title}
+							</Typography>
 						</div>
-						<Typography
-							className='mt-5 text-sm font-medium'
-							variant='paragraph'
-						>
+						<Typography className='mt-3 text-[1rem]' variant='paragraph'>
 							{shortDescription}
 						</Typography>
-					</>
-				)}
-			</AccordionHeader>
-			<AccordionBody className='!rounded-[0.5rem] border-none p-2  text-white'>
-				<Typography variant='paragraph' className='text-balance'>
-					{longDescription}
-				</Typography>
-
-				<div
-					className='!rounded-b-full-[0.3rem] absolute bottom-0 right-0 flex h-auto
-				w-[100%] flex-row items-center justify-end gap-x-2 bg-secondary bg-opacity-15 px-2 py-1'
-				>
-					<div className='item-center pt-auto grow flex-wrap space-x-1'>
-						{tech.map((value: string, index: any) => {
-							return (
-								<Button
-									disabled
-									key={index}
-									className='!rounded-[0.2rem] border-secondary bg-black-default 
-									font-normal normal-case text-secondary hover:cursor-pointer
-									hover:text-black-default'
-									variant='outlined'
-									size='sm'
-								>
-									{value}
-								</Button>
-							)
-						})}
 					</div>
-					{git && (
-						<IconButton
-							onClick={() => window.open(git, '_blank')}
-							size='sm'
-							className='bg-secondary p-3'
-						>
-							<Github className='text-black-default' />
-						</IconButton>
-					)}
-					{link && (
-						<IconButton
-							onClick={() => window.open(link, '_blank')}
-							size='sm'
-							className='bg-secondary p-3'
-						>
-							<Link className='text-black-default' />
-						</IconButton>
-					)}
+				)}
+				<div
+					style={{ backgroundImage: `url('${imgUrl}')` }}
+					className={`w-[40%] rounded-tr-[5px] bg-blue-500 bg-cover`}
+				/>
+			</div>
+			<div
+				className='!rounded-b-full-[0.3rem] absolute bottom-0 right-0 flex h-auto
+				w-[100%] flex-row items-center justify-end gap-x-2 bg-secondary-default 
+				bg-opacity-15 px-2 py-1'
+			>
+				<div className='grow flex-wrap space-x-1'>
+					{tech.map((value: string, index: any) => {
+						return (
+							<Button
+								size='sm'
+								ripple={false}
+								placeholder={''}
+								variant='text'
+								className='m-[0.1rem] rounded-[2px] bg-secondary-default !p-[0.3rem] text-[0.6rem] 
+							font-normal normal-case text-white-default hover:cursor-default hover:bg-black-default
+							dark:bg-black-dark'
+							>
+								{value}
+							</Button>
+						)
+					})}
 				</div>
-			</AccordionBody>
+				{git && (
+					<Chip
+						variant='outlined'
+						onTap={() => window.open(git, '_blank')}
+						size='sm'
+						icon={<Github size={'sm'} />}
+						value='Repo'
+						className=' text-secondary !rounded-[0.2rem] border-secondary-default
+						font-normal normal-case hover:cursor-pointer hover:bg-secondary-default 
+						hover:text-black-default dark:hover:bg-secondary-dark'
+					/>
+				)}
+				{link && (
+					<Chip
+						size='sm'
+						variant='outlined'
+						onClick={() => window.open(link, '_blank')}
+						className='text-secondary !rounded-[0.2rem] border-secondary-default 
+						font-normal normal-case hover:cursor-pointer hover:bg-secondary-default
+						hover:text-black-default'
+						icon={<Link size={'sm'} />}
+						value='Link'
+					>
+						<Link className='text-black-default' />
+					</Chip>
+				)}
+			</div>
 		</Accordion>
 	)
 }
 
 const Projects = () => {
 	return (
-		<div className='flex w-auto flex-row flex-wrap items-start lg:w-[auto]'>
-			<div className='min-h-[100vh] w-[100%]'>
-				<div className=' flex h-[5rem] w-full flex-row items-center justify-center bg-[url(/header.svg)]'>
-					<Typography
-						className='font-extrabold uppercase text-white text-opacity-20'
-						variant='h1'
-					>
-						Projects
-					</Typography>
-				</div>
-				<div
-					className='lg:gap-right-0 flex w-full flex-row flex-wrap 
-				  gap-2 px-5 pb-3 pt-5 md:gap-1 lg:gap-y-3 lg:pr-0'
-				>
-					{projects.sampleData.map((data) => {
-						return (
-							<div
-								key={data.id}
-								className='h-auto min-h-[20rem] w-full lg:max-w-[49.6%]'
-							>
-								<ProjectsDropdown key={data.id} {...data} />
-							</div>
-						)
-					})}
-				</div>
+		<div className='mt-[10rem] '>
+			<div className='flex min-h-[100%] !w-[100%] flex-wrap justify-center'>
+				{projects.sampleData.map((data) => {
+					console.log(data)
+					return <ProjectsDropdown key={data.id} {...data} />
+				})}
 			</div>
 		</div>
 	)
