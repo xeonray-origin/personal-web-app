@@ -14,7 +14,7 @@ const EducationTimeline = () => {
 	return (
 		<div className='mt-[2rem]'>
 			<Typography
-				className='mt-[1rem] text-center md:text-left'
+				className='mt-[1rem] text-center font-bold md:text-left'
 				placeholder={''}
 				variant='lead'
 			>
@@ -25,19 +25,22 @@ const EducationTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-							<TimelineIcon className='bg-secondary p-2 text-black-default'>
+							<TimelineIcon
+								className='bg-secondary-default p-2 text-black-default 
+								dark:bg-secondary-dark dark:text-black-dark'
+							>
 								<GraduationCap />
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
 								variant='h5'
-								className='text-secondary'
+								className='font-bold text-secondary-default'
 							>
 								University of Southampton, MS in Cybersecurity
 							</Typography>
 						</TimelineHeader>
 						<TimelineBody className='pb-8'>
-							<Typography placeholder={''} className='font-normal text-white'>
+							<Typography placeholder={''} className='text-white font-normal'>
 								Exposure to live pentesting techniques and tools. Learned
 								indepth about cyberspace and cyber crimes. Learned about
 								cryptography. Exposure to Security Analysis lifecycle and
@@ -48,13 +51,16 @@ const EducationTimeline = () => {
 					</TimelineItem>
 					<TimelineItem>
 						<TimelineHeader>
-							<TimelineIcon className='bg-secondary p-2 text-black-default'>
+							<TimelineIcon
+								className='bg-secondary-default p-2 text-black-default
+								dark:bg-secondary-dark dark:text-black-dark'
+							>
 								<GraduationCap />
 							</TimelineIcon>
 							<Typography
 								placeholder={''}
 								variant='h5'
-								className='text-secondary'
+								className='font-bold text-secondary-default'
 							>
 								West Bengal University of Technology, Bachelor of Computer
 								Application

@@ -9,7 +9,10 @@ const SpecialButton = (props: any) => {
 			key={key}
 			ripple={false}
 			placeholder={''}
-			className='border-[0.01rem m-1 rounded-[0.3rem] !border-secondary !border-opacity-20 bg-black-default p-3 font-normal normal-case text-secondary hover:cursor-default hover:bg-inherit'
+			size='sm'
+			className='size-sm text-secondary m-1 rounded-[0.3rem] border-[0.01rem] 
+			bg-black-default !p-2 font-normal normal-case hover:cursor-default 
+			hover:bg-black-default dark:border-secondary-dark dark:bg-black-dark dark:bg-black-dark'
 			variant='text'
 		>
 			{text}
@@ -19,7 +22,10 @@ const SpecialButton = (props: any) => {
 
 const Skills = () => {
 	return (
-		<div className='mt-7 w-full text-center md:pl-5 md:pr-1 md:text-left md:text-lg lg:mt-4 lg:pl-0'>
+		<div
+			className='mt-7 w-full text-center md:pl-5 md:pr-1 md:text-left md:text-lg 
+			lg:mt-4 lg:pl-0'
+		>
 			<Typography
 				placeholder={''}
 				className='text-md lg:text-lg'

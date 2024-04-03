@@ -1,13 +1,12 @@
-import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
-import { lightTheme } from '@/styles'
+'use client'
 
-import { Button, ThemeProvider } from '@/components/ui'
+import { Poppins } from 'next/font/google'
 
 import '@/styles/globals.css'
 
 import { FloatingMenu, Header, Sidebar } from '@/components'
 import { cn } from '@/lib/utils'
+import { ThemeProvider, useTheme } from 'next-themes'
 
 const font = Poppins({
 	subsets: ['latin'],
@@ -15,24 +14,6 @@ const font = Poppins({
 	weight: ['400', '500', '600', '700'],
 	variable: '--font-poppins',
 })
-
-export const metadata: Metadata = {
-	title: 'Amritendu Bhattacharjee',
-	applicationName: 'Amritendu Bhattacharjee',
-	authors: [{ name: 'Amritendu Bhattacharjee' }],
-	description: 'Software Developer | Cybersecurity Enthusiast',
-	icons: [
-		{ rel: 'icon', url: '/favicon.ico', type: 'image/x-icon', sizes: '48x48' },
-	],
-	generator:
-		'Amritendu Bhattacharjee, amritendu, bhattacharjee, software engineer, developer, fullstack developer, senior software engineer, optym, optym india, optym india pvt ltd, optym india pvt. ltd., optym india pvt. ltd., razrlab, cbnits, ',
-	robots: {
-		googleBot: {
-			follow: true,
-			index: true,
-		},
-	},
-}
 
 export default function RootLayout({
 	children,
@@ -42,14 +23,11 @@ export default function RootLayout({
 	return (
 		<html className={font.variable} lang='en' suppressHydrationWarning>
 			<body className={cn('bg-background antialiased')}>
-				<ThemeProvider
-					value={{
-						theme: lightTheme,
-					}}
-				>
-					<div className='flex bg-primary'>
+				<ThemeProvider attribute='class' defaultTheme='light'>
+					<div className='h-[100vh] w-[100%] bg-black-default dark:bg-black-dark'>
 						<Sidebar />
-						<div className=' w-100 h-[100%] max-w-[2400px]  bg-primary pb-20 pr-0 lg:ml-[14rem] lg:pr-5'>
+						<div className='h-[100%] max-w-[2400px] overflow-y-auto bg-primary-default pb-20 pr-0 dark:bg-primary-dark lg:ml-[14rem] lg:pr-5'>
+							<Header />
 							{children}
 						</div>
 						<div className='fixed bottom-5 right-5 lg:hidden'>
