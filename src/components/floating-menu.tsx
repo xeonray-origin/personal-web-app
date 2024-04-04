@@ -46,7 +46,7 @@ const FloatingMenu = () => {
 					size='lg'
 					className='rounded-full !bg-secondary-default text-black-default focus:!bg-secondary-default  '
 				>
-					<PlusIcon className='h-5 w-5 transition-transform group-hover:rotate-45' />
+					<PlusIcon className='size-5 transition-transform group-hover:rotate-45' />
 				</IconButton>
 			</SpeedDialHandler>
 			<SpeedDialContent placeholder={undefined}>
@@ -59,7 +59,7 @@ const FloatingMenu = () => {
 					onClick={() => handleClick('home')}
 					placeholder={undefined}
 				>
-					<HomeIcon className='size-[1rem]' />
+					<HomeIcon className='size-4' />
 					<Typography
 						color='blue-gray'
 						className={cn(
@@ -80,7 +80,7 @@ const FloatingMenu = () => {
 					onClick={() => handleClick('projects')}
 					placeholder={undefined}
 				>
-					<AppWindow className='size-[1rem]' />
+					<AppWindow className='size-4' />
 					<Typography
 						color='blue-gray'
 						className={cn(
@@ -97,7 +97,7 @@ const FloatingMenu = () => {
 					className='border-secondary-default bg-white-default bg-opacity-10 dark:bg-secondary-dark md:hidden'
 					placeholder={undefined}
 				>
-					<Save className='size-[1rem]' />
+					<Save className='size-4' />
 					<Typography
 						color='blue-gray'
 						className={cn('text-[0.5rem] font-bold dark:text-white-default')}
@@ -113,7 +113,7 @@ const FloatingMenu = () => {
 					className='border-secondary-default bg-white-default bg-opacity-10 dark:bg-secondary-dark md:hidden'
 					placeholder={undefined}
 				>
-					<Save className='size-[1rem]' />
+					<Save className='size-4' />
 					<Typography
 						color='blue-gray'
 						className={cn('text-[0.5rem] font-bold dark:text-white-default')}

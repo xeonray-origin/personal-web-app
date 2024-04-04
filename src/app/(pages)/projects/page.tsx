@@ -18,17 +18,17 @@ const ProjectsDropdown = (props: any) => {
 
 	return (
 		<Accordion
-			className=' m-1 !h-[20rem] w-[100%] !rounded-md border-[0.1rem] border-secondary-default
+			className=' m-1 !h-80 w-full !rounded-md border-[0.1rem] border-secondary-default
 			shadow-md dark:border-secondary-dark dark:shadow-none lg:w-[42rem]'
 			open={true}
 		>
 			<div
 				className='text-white hover:!text-white flex h-[89%] flex-row 
-				flex-wrap !rounded-t-[0.5rem] !border-none !border-none bg-white-default
+				flex-wrap !rounded-t-lg !border-none !border-none bg-white-default
 				pl-2 hover:cursor-default dark:bg-black-dark'
 			>
 				{title && shortDescription && (
-					<div className='w-[60%] pr-1'>
+					<div className='w-3/5 pr-1'>
 						<div className='mt-2 inline-block flex space-x-2 align-middle'>
 							<Typography className='align-middle' variant='h3'>
 								{title}
@@ -41,12 +41,12 @@ const ProjectsDropdown = (props: any) => {
 				)}
 				<div
 					style={{ backgroundImage: `url('${imgUrl}')` }}
-					className={`w-[40%] rounded-tr-[5px] bg-blue-500 bg-cover`}
+					className={`w-2/5 rounded-tr-[5px] bg-blue-500 bg-cover`}
 				/>
 			</div>
 			<div
 				className='!rounded-b-full-[0.3rem] absolute bottom-0 right-0 flex h-auto
-				w-[100%] flex-row items-center justify-end gap-x-2 bg-secondary-default 
+				w-full flex-row items-center justify-end gap-x-2 bg-secondary-default 
 				bg-opacity-15 px-2 py-1'
 			>
 				<div className='grow flex-wrap space-x-1'>
@@ -97,8 +97,8 @@ const ProjectsDropdown = (props: any) => {
 
 const Projects = () => {
 	return (
-		<div className='mt-[10rem] '>
-			<div className='flex min-h-[100%] !w-[100%] flex-wrap justify-center'>
+		<div className='mt-40 '>
+			<div className='flex min-h-full !w-full flex-wrap justify-center'>
 				{projects.sampleData.map((data) => {
 					console.log(data)
 					return <ProjectsDropdown key={data.id} {...data} />

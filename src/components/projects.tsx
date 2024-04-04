@@ -18,7 +18,7 @@ const ProjectHolder = (props: any) => {
 	return (
 		<Accordion
 			key={key}
-			className=' !min-h-[10rem] !rounded-md border-[0.1rem] 
+			className=' !min-h-40 !rounded-md border-[0.1rem] 
 			border-secondary-default shadow-md dark:border-secondary-dark 
 			dark:shadow-none'
 			placeholder={''}
@@ -75,8 +75,8 @@ const ProjectHolder = (props: any) => {
 					</Typography>
 				</div>
 				<div
-					className='absolute bottom-0 left-0 right-0 flex h-auto 
-					w-full flex-row flex-wrap justify-end p-1'
+					className='absolute bottom-0 inset-x-0 flex h-auto w-full 
+					flex-row flex-wrap justify-end p-1'
 				>
 					{tech.map((text: string) => (
 						<Button
@@ -105,7 +105,7 @@ const Projects = () => {
 	}
 
 	return (
-		<div className='mt-[2rem]'>
+		<div className='mt-8'>
 			<div className='mt-2 flex items-start px-2 lg:px-0'>
 				<div className='grow'>
 					<Typography

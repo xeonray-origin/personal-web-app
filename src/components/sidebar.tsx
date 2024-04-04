@@ -29,7 +29,7 @@ const SidebarListItem = (props: any) => {
 		<ListItem
 			selected={false}
 			onClick={() => handleClick(page)}
-			className='rounded-1  hover:bg-secondary-default focus:bg-[transparent]'
+			className='rounded-1  hover:bg-secondary-default focus:bg-transparent'
 		>
 			<ListItemPrefix className='dark:text-white-default'>
 				{icon}
@@ -64,7 +64,7 @@ const Sidebar = () => {
 	}, [pathname])
 
 	return (
-		<div className='xs:max-md:relative !bg-secondary fixed hidden h-[100vh] w-[14rem]  lg:block'>
+		<div className='xs:max-md:relative !bg-secondary fixed hidden h-screen w-56  lg:block'>
 			<div className='container mt-5  flex grow flex-row place-content-center'>
 				<Image
 					height={120}
@@ -87,7 +87,7 @@ const Sidebar = () => {
 					))}
 				</List>
 			</div>
-			<div className='absolute bottom-0 left-0 flex h-12 w-[100%] flex-row items-center justify-center gap-x-5 '>
+			<div className='absolute bottom-0 left-0 flex h-12 w-full flex-row items-center justify-center gap-x-5 '>
 				<IconButton
 					variant='outlined'
 					onClick={() => window.open('https://github.com/xeonray-origin')}

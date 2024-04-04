@@ -46,7 +46,7 @@ const RecognitionSection = () => {
 	}
 
 	return (
-		<div className='mt-[3rem] px-3 lg:px-0'>
+		<div className='mt-12 px-3 lg:px-0'>
 			<Typography placeholder={''} variant='lead'>
 				Certifications and Recognitions
 			</Typography>

@@ -12,9 +12,9 @@ import {
 
 const EducationTimeline = () => {
 	return (
-		<div className='mt-[2rem]'>
+		<div className='mt-8'>
 			<Typography
-				className='mt-[1rem] text-center font-bold md:text-left'
+				className='mt-4 text-center font-bold md:text-left'
 				placeholder={''}
 				variant='lead'
 			>
