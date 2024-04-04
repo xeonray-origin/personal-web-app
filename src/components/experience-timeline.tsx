@@ -13,9 +13,9 @@ import {
 
 const ExperienceTimeline = () => {
 	return (
-		<div className='mt-[2rem]'>
+		<div className='mt-8'>
 			<Typography
-				className='mt-[1rem] text-center font-bold md:text-left'
+				className='mt-4 text-center font-bold md:text-left'
 				placeholder={''}
 				variant='lead'
 			>
@@ -55,7 +55,7 @@ const ExperienceTimeline = () => {
 					<TimelineItem>
 						<TimelineConnector />
 						<TimelineHeader>
-							<TimelineIcon className='bg-secondary-default p-2 p-2 text-black-default dark:bg-secondary-dark dark:text-black-dark'>
+							<TimelineIcon className='bg-secondary-default p-2 text-black-default dark:bg-secondary-dark dark:text-black-dark'>
 								<Building2 />
 							</TimelineIcon>
 							<Typography

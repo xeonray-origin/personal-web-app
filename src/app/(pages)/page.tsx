@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import { type Metadata } from 'next'
 import {
 	About,
 	AcademicTimeline,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
 	return (
-		<div className='mt-20 flex min-h-[100vh] w-full flex-wrap'>
+		<div className='mt-20 flex min-h-screen w-full flex-wrap'>
 			<div className=' w-100 text-white px-5 pt-20 md:pt-5 lg:w-[70%]'>
 				<About />
 				<ExperienceTimeline />

@@ -1,4 +1,4 @@
-import { ReactElement } from 'react'
+import { type ReactElement } from 'react'
 import { FolderKanban, Home } from 'lucide-react'
 
 export type pageLinkType = 'home' | 'projects'
@@ -8,7 +8,7 @@ export interface IPageConfig {
 	icon: ReactElement
 }
 
-export const pages: IPageConfig[] = [
+export const pages: Array<IPageConfig> = [
 	{
 		link: 'home',
 		icon: <Home />,

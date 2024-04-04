@@ -17,22 +17,22 @@ const Header = () => {
 
 	return (
 		<div
-			className={`w-100 rounded-2 rounded-2 flex h-[12rem] w-full 
+			className={`w-100 rounded-2 rounded-2 flex h-48 w-full 
 		   flex-wrap bg-[url(/header_dark.svg)] dark:bg-[url(/header.svg)] md:flex-row md:pl-3`}
 		>
 			<div className=' relative z-30 flex w-full items-center justify-center md:justify-start '>
 				<Avatar
-					className='border-white top-[8rem]  !size-[8rem] border-2 md:top-[9rem]'
+					className='border-white top-32  !size-32 border-2 md:top-36'
 					src='/photo.jpeg'
 					alt='avatar'
 					placeholder={''}
 				/>
 			</div>
 			<div
-				className={`item-center justify-centerpt-5 mt-[7rem] h-[5rem] 
-				w-full pt-5 md:ml-2 md:mt-[4rem] md:flex md:justify-normal md:pt-1`}
+				className={`item-center justify-centerpt-5 mt-28 h-20 
+				w-full pt-5 md:ml-2 md:mt-16 md:flex md:justify-normal md:pt-1`}
 			>
-				<div className='text-center md:ml-[8rem] md:grow md:text-left '>
+				<div className='text-center md:ml-32 md:grow md:text-left '>
 					<Typography
 						className=' text-white truncate text-nowrap text-2xl'
 						placeholder={''}
