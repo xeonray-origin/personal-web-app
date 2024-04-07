@@ -41,7 +41,7 @@ const Header = () => {
 						Amritendu Bhattacharjee
 					</Typography>
 					<Typography
-						className='text-md truncate text-nowrap text-[#212121] dark:text-[#f1f1f2]
+						className='text-md text-[#212121] dark:text-[#f1f1f2]
 						md:text-sm'
 						placeholder={''}
 						variant='paragraph'

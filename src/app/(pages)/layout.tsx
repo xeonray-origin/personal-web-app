@@ -33,7 +33,7 @@ export default function RootLayout({
 							<Header />
 							{children}
 						</div>
-						<div className='fixed bottom-5 right-5 lg:hidden'>
+						<div className='absolute bottom-5 right-5 lg:hidden'>
 							<FloatingMenu />
 						</div>
 					</div>
