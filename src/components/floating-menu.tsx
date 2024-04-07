@@ -38,7 +38,7 @@ const FloatingMenu = () => {
 	}, [pathname])
 
 	return (
-		<SpeedDial open={open} className='bg-white'>
+		<SpeedDial open={open} className='bg-white !z-50'>
 			<SpeedDialHandler>
 				<IconButton
 					onClick={() => setOpen(!open)}
@@ -49,22 +49,21 @@ const FloatingMenu = () => {
 					<PlusIcon className='size-5 transition-transform group-hover:rotate-45' />
 				</IconButton>
 			</SpeedDialHandler>
-			<SpeedDialContent placeholder={undefined}>
+			<SpeedDialContent>
 				<SpeedDialAction
 					className={
 						active === 'home'
-							? 'bg-secondary-default text-white-default'
-							: 'border-secondary-default bg-white-default bg-opacity-10 dark:bg-secondary-dark'
+							? '!bg-secondary-default text-white-default'
+							: 'border-secondary-default !bg-white-default dark:!bg-secondary-dark dark:!text-[#212121]'
 					}
 					onClick={() => handleClick('home')}
-					placeholder={undefined}
 				>
 					<HomeIcon className='size-4' />
 					<Typography
 						color='blue-gray'
 						className={cn(
 							'text-[0.5rem] font-bold dark:text-white-default',
-							active === 'home' ? 'text-white-default' : '',
+							active === 'home' ? 'text-white-default' : '!text-[#212121]',
 						)}
 						placeholder={undefined}
 					>
@@ -75,7 +74,7 @@ const FloatingMenu = () => {
 					className={
 						active === 'projects'
 							? 'bg-secondary-default text-white-default'
-							: 'border-secondary-default bg-white-default bg-opacity-10 dark:bg-secondary-dark'
+							: 'border-secondary-default !bg-white-default bg-opacity-10 dark:!bg-secondary-dark dark:!text-[#212121]'
 					}
 					onClick={() => handleClick('projects')}
 					placeholder={undefined}
@@ -85,7 +84,7 @@ const FloatingMenu = () => {
 						color='blue-gray'
 						className={cn(
 							'text-[0.5rem] font-bold dark:text-white-default',
-							active === 'projects' ? 'text-white-default' : '',
+							active === 'projects' ? 'text-white-default' : '!text-[#212121]',
 						)}
 						placeholder={undefined}
 					>
@@ -94,13 +93,13 @@ const FloatingMenu = () => {
 				</SpeedDialAction>
 				<SpeedDialAction
 					onClick={utils.downloadResume}
-					className='border-secondary-default bg-white-default bg-opacity-10 dark:bg-secondary-dark md:hidden'
+					className='border-secondary-default !bg-white-default bg-opacity-10 dark:!bg-secondary-dark dark:!text-[#212121] md:hidden'
 					placeholder={undefined}
 				>
 					<Save className='size-4' />
 					<Typography
 						color='blue-gray'
-						className={cn('text-[0.5rem] font-bold dark:text-white-default')}
+						className={cn('text-[0.5rem] font-bold dark:text-[#212121]')}
 						placeholder={undefined}
 					>
 						Resume
@@ -110,13 +109,13 @@ const FloatingMenu = () => {
 					onClick={() =>
 						theme == 'dark' ? setTheme('light') : setTheme('dark')
 					}
-					className='border-secondary-default bg-white-default bg-opacity-10 dark:bg-secondary-dark md:hidden'
+					className='border-secondary-default !bg-white-default bg-opacity-10 dark:!bg-secondary-dark dark:!text-[#212121] md:hidden'
 					placeholder={undefined}
 				>
 					<Save className='size-4' />
 					<Typography
 						color='blue-gray'
-						className={cn('text-[0.5rem] font-bold dark:text-white-default')}
+						className={cn('text-[0.5rem] font-bold dark:text-[#212121]')}
 						placeholder={undefined}
 					>
 						Dark
