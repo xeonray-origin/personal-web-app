@@ -1,10 +1,13 @@
-'use client'
-
 import { Poppins } from 'next/font/google'
 
 import '@/styles/globals.css'
 
-import { FloatingMenu, Header, Sidebar } from '@/components'
+import {
+	CustomThemeProvider,
+	FloatingMenu,
+	Header,
+	Sidebar,
+} from '@/components'
 import { cn } from '@/lib/utils'
 import { ThemeProvider, useTheme } from 'next-themes'
 
@@ -23,7 +26,7 @@ export default function RootLayout({
 	return (
 		<html className={font.variable} lang='en' suppressHydrationWarning>
 			<body className={cn('bg-background antialiased')}>
-				<ThemeProvider attribute='class' defaultTheme='light'>
+				<CustomThemeProvider attribute='class' defaultTheme='light'>
 					<div className='h-screen w-full bg-black-default dark:bg-black-dark'>
 						<Sidebar />
 						<div className='h-full max-w-[2400px] overflow-y-auto bg-primary-default pb-20 pr-0 dark:bg-primary-dark lg:ml-56 lg:pr-5'>
@@ -34,7 +37,7 @@ export default function RootLayout({
 							<FloatingMenu />
 						</div>
 					</div>
-				</ThemeProvider>
+				</CustomThemeProvider>
 			</body>
 		</html>
 	)
