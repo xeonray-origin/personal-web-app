@@ -15,7 +15,7 @@ const About = () => {
 				{SECTION_HEADER}
 			</Typography>
 			<Typography
-				className='text-center font-medium md:text-left'
+				className='text-md text-center font-medium md:text-left'
 				placeholder={''}
 				variant='paragraph'
 			>

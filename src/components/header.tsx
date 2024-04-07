@@ -41,11 +41,13 @@ const Header = () => {
 						Amritendu Bhattacharjee
 					</Typography>
 					<Typography
-						className='text-md md:text-md text-white truncate text-nowrap lg:text-lg'
+						className='text-md truncate text-nowrap text-[#212121] dark:text-[#f1f1f2]
+						md:text-sm'
 						placeholder={''}
-						variant='lead'
+						variant='paragraph'
 					>
-						Senior Software Engineer | MERN stack | Distributed Systems
+						Senior Software Engineer | Distributed Systems | Cyber Security
+						Enthusiast
 					</Typography>
 				</div>
 				<Button
@@ -54,11 +56,18 @@ const Header = () => {
 					className='invisible mx-auto mt-8 flex items-center text-nowrap !rounded-none border-none
 					bg-secondary-default font-normal normal-case !text-white-default dark:bg-secondary-dark dark:font-bold 
 				  dark:!text-black-dark md:visible md:float-end md:m-0	md:mr-2 md:mt-1 md:h-[3.3rem] md:!rounded-[0.1rem] lg:mr-0'
-					size='lg'
+					size='sm'
 					variant='outlined'
 				>
-					<Save className='!text-white-default dark:!text-black-dark' />
-					Download Resume
+					<Save className='mr-1 !text-white-default dark:!text-[#212121]' />
+					<Typography
+						className='text-md truncate text-nowrap text-[#212121] text-white-default 
+						dark:font-bold dark:text-[#212121] md:text-sm'
+						placeholder={''}
+						variant='paragraph'
+					>
+						Download Resume
+					</Typography>
 				</Button>
 			</div>
 		</div>
