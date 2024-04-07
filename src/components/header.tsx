@@ -45,7 +45,7 @@ const Header = () => {
 						placeholder={''}
 						variant='lead'
 					>
-						Fullstack Developer | Cybersecurity Enthusiast
+						Senior Software Engineer | MERN stack | Distributed Systems
 					</Typography>
 				</div>
 				<Button
