@@ -9,7 +9,6 @@ import {
 	Sidebar,
 } from '@/components'
 import { cn } from '@/lib/utils'
-import { ThemeProvider, useTheme } from 'next-themes'
 
 const font = Poppins({
 	subsets: ['latin'],
@@ -24,12 +23,17 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html className={font.variable} lang='en' suppressHydrationWarning>
-			<body className={cn('bg-background antialiased')}>
+		<html lang='en' suppressHydrationWarning>
+			<body className={cn('bg-background antialiased', font.className)}>
 				<CustomThemeProvider attribute='class' defaultTheme='light'>
-					<div className='h-screen w-full bg-black-default dark:bg-black-dark'>
+					<div
+						className={`h-screen w-full bg-black-default dark:bg-black-dark`}
+					>
 						<Sidebar />
-						<div className='h-full max-w-[2400px] overflow-y-auto bg-primary-default pb-20 pr-0 dark:bg-primary-dark lg:ml-56 lg:pr-5'>
+						<div
+							className='h-full max-w-[2400px] overflow-y-auto bg-primary-default pb-20 pr-0 
+							dark:bg-primary-dark lg:ml-56 lg:pr-5'
+						>
 							<Header />
 							{children}
 						</div>
