@@ -36,9 +36,9 @@ module.exports = withMT({
 			'none': '0 0 rgb(0, 0 / 0, 0)',
 		},
 		fontFamily: {
-			sans: ['Poppins', 'sans-serif'],
-			serif: ['Poppins', 'serif'],
-			body: ['Poppins', 'sans-serif'],
+			sans: ['var(--font-poppins)'],
+			serif: ['var(--font-poppins)'],
+			body: ['var(--font-poppins)'],
 		},
 		screen: {
 			'xs': '340px',
