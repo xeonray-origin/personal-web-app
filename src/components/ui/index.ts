@@ -7,6 +7,9 @@ import {
 	Avatar,
 	Button,
 	Card,
+	CardBody,
+	CardFooter,
+	CardHeader,
 	Chip,
 	IconButton,
 	List,
@@ -24,10 +27,15 @@ import {
 	TimelineHeader,
 	TimelineIcon,
 	TimelineItem,
+	Tooltip,
 	Typography,
 } from '@material-tailwind/react'
 
 export {
+	CardBody,
+	CardFooter,
+	CardHeader,
+	Tooltip,
 	ThemeProvider,
 	Button,
 	Avatar,

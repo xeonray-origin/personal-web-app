@@ -18,6 +18,7 @@ const EducationTimeline = () => {
 					{studyTimeline.map((item) => {
 						return (
 							<TimelineItemRenderer
+								key={Math.random()}
 								heading={item.heading}
 								icon={item.icon}
 								from={item.from}
