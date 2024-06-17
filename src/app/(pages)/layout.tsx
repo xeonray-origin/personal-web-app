@@ -35,7 +35,7 @@ export default function RootLayout({
 							dark:bg-primary-dark lg:ml-56 lg:pr-5'
 						>
 							<Header />
-							{children}
+							<div className='mt-[10rem] pl-5 md:mt-[8rem]'>{children}</div>
 						</div>
 						<div className='absolute bottom-5 right-5 lg:hidden'>
 							<FloatingMenu />
