@@ -81,6 +81,15 @@ export const projects = [
 export const workTimeline = [
 	{
 		icon: <Building2 />,
+		heading: 'Senior Software Engineer at EPAM Systems',
+		from: '',
+		to: '',
+		descriptionArr: [
+			'Working with Digital Experience Engineering as a key developer.',
+		],
+	},
+	{
+		icon: <Building2 />,
 		heading: 'Senior Software Engineer at Optym',
 		from: '',
 		to: '',
