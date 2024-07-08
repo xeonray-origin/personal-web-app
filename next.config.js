@@ -9,6 +9,15 @@ const settings = {
 	},
 	swcMinify: true,
 	staticPageGenerationTimeout: 60,
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: '**.unsplash.com',
+				pathname: '/**',
+			},
+		],
+	},
 }
 
 module.exports = settings

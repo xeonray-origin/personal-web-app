@@ -7,8 +7,8 @@ const Quote = (props: any) => {
 				variant='lead'
 				className='text-xl font-medium italic leading-relaxed'
 			>
-				"If I have seen farther than others, it is because I have stood on the
-				shoulders of giants." -- Issac Newton
+				&quot; If I have seen farther than others, it is because I have stood on
+				the shoulders of giants.&quot; -- Issac Newton
 			</Typography>
 		</blockquote>
 	)

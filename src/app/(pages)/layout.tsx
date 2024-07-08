@@ -1,5 +1,6 @@
 import { Poppins } from 'next/font/google'
 
+import 'swiper/css'
 import '@/styles/globals.css'
 
 import {
@@ -35,7 +36,9 @@ export default function RootLayout({
 							dark:bg-primary-dark lg:ml-56 lg:pr-5'
 						>
 							<Header />
-							<div className='mt-[10rem] pl-5 md:mt-[8rem]'>{children}</div>
+							<div className='mt-[10rem] px-1 md:mt-[8rem] lg:pl-5'>
+								{children}
+							</div>
 						</div>
 						<div className='absolute bottom-5 right-5 lg:hidden'>
 							<FloatingMenu />

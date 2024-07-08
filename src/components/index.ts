@@ -12,4 +12,4 @@ export { default as CustomThemeProvider } from './theme-provider'
 export { default as TimelineItemRenderer } from './timeline-rederer'
 export { default as Quote } from './quote'
 
-export { BlogCards } from './blog-cards'
+export { Carousel } from './carousel'

@@ -1,9 +1,17 @@
-import { Quote } from '@/components'
+'use client'
+
+import { useRef } from 'react'
+import { Carousel, Quote } from '@/components'
 
 const Blogs = () => {
+	const swiperRef = useRef()
+
 	return (
-		<div className='bg-red-[700] w-full'>
+		<div className='w-full '>
 			<Quote />
+			<div className='flex h-[30rem] w-full bg-red-700'>
+				<Carousel />
+			</div>
 		</div>
 	)
 }
