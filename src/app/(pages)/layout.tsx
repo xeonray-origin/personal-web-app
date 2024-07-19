@@ -1,5 +1,7 @@
 import { Poppins } from 'next/font/google'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import '@/styles/globals.css'
 
 import {
@@ -35,7 +37,9 @@ export default function RootLayout({
 							dark:bg-primary-dark lg:ml-56 lg:pr-5'
 						>
 							<Header />
-							{children}
+							<div className='mt-[10rem] px-1 md:mt-[8rem] lg:pl-5'>
+								{children}
+							</div>
 						</div>
 						<div className='absolute bottom-5 right-5 lg:hidden'>
 							<FloatingMenu />

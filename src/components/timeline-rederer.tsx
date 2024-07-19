@@ -45,6 +45,7 @@ const TimelineItemRenderer = (props: ITimelineItemProps) => {
 				<List className=''>
 					{descriptionArr.map((description) => (
 						<ListItem
+							key={Math.floor(Math.random() * descriptionArr.length)}
 							ripple={false}
 							className='!pointer-events-none !mt-2 !p-0 text-[#212121] dark:text-white-default'
 						>

@@ -55,13 +55,14 @@ const Header = () => {
 					onClick={() => download()}
 					className='invisible mx-auto mt-8 flex items-center text-nowrap !rounded-none border-none
 					bg-secondary-default font-normal normal-case !text-white-default dark:bg-secondary-dark dark:font-bold 
-				  dark:!text-black-dark md:visible md:float-end md:m-0	md:mr-2 md:mt-1 md:h-[3.3rem] md:!rounded-[0.1rem] lg:mr-0'
+				  dark:!text-black-dark md:visible md:float-end md:m-0	md:mr-2 md:mt-1 md:h-[3.3rem] md:!rounded-[0.1rem] 
+					lg:mr-0'
 					size='sm'
 					variant='outlined'
 				>
 					<Save className='mr-1 !text-white-default dark:!text-[#212121]' />
 					<Typography
-						className='text-md truncate text-nowrap text-[#212121] text-white-default 
+						className='text-md truncate text-nowrap text-white-default 
 						dark:font-bold dark:text-[#212121] md:text-sm'
 						placeholder={''}
 						variant='paragraph'

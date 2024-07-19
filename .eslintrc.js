@@ -44,6 +44,7 @@ const config = {
 		'@typescript-eslint/no-unsafe-member-access': 'warn',
 		'@typescript-eslint/no-unsafe-call': 'warn',
 		'tailwindcss/no-contradicting-classname': 'warn',
+		'tailwindcss/no-unnecessary-arbitrary-value': 'off',
 	},
 }
 

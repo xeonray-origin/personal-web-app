@@ -2,11 +2,15 @@ import { home } from '@/config'
 
 import { Button, Typography } from './ui'
 
-const SpecialButton = (props: any) => {
-	const { text, key } = props
+interface ISpecialButtonProps {
+	text: string
+	key: string | number
+}
+
+const SpecialButton = (props: ISpecialButtonProps) => {
+	const { text } = props
 	return (
 		<Button
-			key={key}
 			ripple={false}
 			placeholder={''}
 			size='sm'

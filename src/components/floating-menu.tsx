@@ -29,7 +29,6 @@ const FloatingMenu = () => {
 	const { theme, setTheme } = useTheme()
 
 	useEffect(() => {
-		console.log(pathname)
 		if (pathname === '/') {
 			setActive('home')
 		} else {
