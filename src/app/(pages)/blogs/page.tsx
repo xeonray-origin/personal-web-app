@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
-import { Carousel, Quote } from '@/components'
+import { ArticleCard, Quote } from '@/components'
 
 const Blogs = () => {
 	const swiperRef = useRef()
@@ -9,8 +9,9 @@ const Blogs = () => {
 	return (
 		<div className='w-full '>
 			<Quote />
-			<div className='flex h-[30rem] w-full bg-red-700'>
-				<Carousel />
+			<div className='flex flex-col'>
+				<ArticleCard />
+				<ArticleCard />
 			</div>
 		</div>
 	)

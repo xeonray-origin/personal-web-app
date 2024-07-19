@@ -11,5 +11,4 @@ export { default as ProjectCard } from './project-cards'
 export { default as CustomThemeProvider } from './theme-provider'
 export { default as TimelineItemRenderer } from './timeline-rederer'
 export { default as Quote } from './quote'
-
-export { Carousel } from './carousel'
+export { default as ArticleCard } from './article-card'

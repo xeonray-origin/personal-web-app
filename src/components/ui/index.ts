@@ -10,6 +10,7 @@ import {
 	CardBody,
 	CardFooter,
 	CardHeader,
+	Carousel,
 	Chip,
 	IconButton,
 	List,
@@ -60,4 +61,5 @@ export {
 	TimelineHeader,
 	TimelineIcon,
 	TimelineItem,
+	Carousel as Swiper,
 }
