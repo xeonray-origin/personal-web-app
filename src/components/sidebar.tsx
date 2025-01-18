@@ -99,7 +99,7 @@ const Sidebar = () => {
 					<Github className='size-4 subpixel-antialiased' />
 				</IconButton>
 				<IconButton
-					onClick={() => window.open('https://www.linkedin.com/in/xeonray/')}
+					onClick={() => window.open('https://www.linkedin.com/in/amritendub/')}
 					variant='outlined'
 					className='border-2 border-secondary-default text-secondary-default subpixel-antialiased 
 					hover:bg-secondary-default hover:text-white-default dark:border-secondary-dark 

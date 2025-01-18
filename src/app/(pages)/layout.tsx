@@ -1,7 +1,9 @@
 import { Poppins } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import '@/styles/globals.css'
 
+import Script from 'next/script'
 import {
 	CustomThemeProvider,
 	FloatingMenu,
@@ -42,6 +44,7 @@ export default function RootLayout({
 						</div>
 					</div>
 				</CustomThemeProvider>
+				<GoogleAnalytics gaId='G-6TYFTBGS13' />
 			</body>
 		</html>
 	)

@@ -24,4 +24,16 @@ export const sampleData = [
 		link: '',
 		git: 'https://github.com/xeonray-origin/typescript-introspection',
 	},
+	{
+		id: uniqid(),
+		icon: <Type />,
+		title: 'AI Text Contrast',
+		imgUrl: '/brain.png',
+		shortDescription: `AI Text Hue takes in an RGB color value (like 255,87,51) and tells you if 
+		the dominant text color should be black or white. Under the hood, it trains a neural network on 
+		a dataset of RGB values paired with the ideal text color, and uses that model to make predictions.`,
+		tech: ['Javascript', 'brain.js'],
+		link: '',
+		git: 'https://github.com/xeonray-origin/ai-text-contrast',
+	},
 ]
