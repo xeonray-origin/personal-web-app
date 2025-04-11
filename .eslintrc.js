@@ -2,7 +2,7 @@
 const config = {
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
-		project: true,
+	project: "./tsconfig.json"
 	},
 	plugins: ['@typescript-eslint'],
 	extends: [
@@ -45,6 +45,7 @@ const config = {
 		'@typescript-eslint/no-unsafe-call': 'warn',
 		'tailwindcss/no-contradicting-classname': 'warn',
 	},
+	ignorePatterns: ["next.config.js"]
 }
 
 module.exports = config
