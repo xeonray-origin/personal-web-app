@@ -46,8 +46,7 @@ const Header = () => {
 						placeholder={''}
 						variant='paragraph'
 					>
-						Senior Software Engineer | Distributed Systems | Cyber Security
-						Enthusiast
+						Senior Software Engineer | React | Node | TypeScript | Applied Cryptography + Distributed Systems | MSc in Cyber Security
 					</Typography>
 				</div>
 				<Button

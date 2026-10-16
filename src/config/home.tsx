@@ -2,18 +2,14 @@ import { Building2, GraduationCap } from 'lucide-react'
 import uniqid from 'uniqid'
 
 export const about = `
-Hi, I am a Senior Software Engineer with 5+ years of experience, 
-and I am passionate about creating solutions that can make a positive 
-impact in the real world. A usual day in my schedule involves developing 
-business requirements into live features, taking part in architectural 
-discussions for feature development, peer reviewing and sometimes hosting 
-sessions on various topics for juniors and interns. I am originally from 
-Kolkata and currently residing in Bengaluru. At home, one will mostly find 
-me spending time with my dog or working on personal projects. Other than 
-that, I love to read on various topics ranging from human evolution to 
-science fiction. I believe that art is as much important in a person’s 
-life as any other field because it helps build the soul while commerce 
-and science build the mind.
+Hi, I'm Amritendu Bhattacharjee, a Senior Software Engineer who
+builds secure, scalable applications. On a typical day I turn business requirements into live features, join
+architecture discussions, review code, and run sessions for junior engineers and
+interns. I care about software that holds up in the real world, so I try to get
+the security and failure modes right before the code ships. Away from work you'll usually find me with my dog,
+building personal projects, or reading anything from human evolution to science
+fiction. I think art matters as much as any other field: commerce and science
+build the mind, but art helps build the soul.
 `
 
 export const skills = [
