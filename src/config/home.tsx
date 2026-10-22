@@ -91,7 +91,13 @@ export const workTimeline = [
 		from: '',
 		to: '',
 		descriptionArr: [
-			'Working with Digital Experience Engineering as a key developer.',
+			'Key contributor in uplifting a legacy application to a modern framework for the client, which increased development efficiency and application performance by ~20%',
+			'Built a client onboarding and prospect conversion workflow that generated more than $2M ARR.',
+			'Implemented enterprise-grade cryptography (AES, RSA, OAuth2.0,  SHA256) to protect PII and preserve integrity.',
+			'Key contributor in multiple initiatives with on-time delivery and zero downtime.',
+			'Created AI artefacts to be shared among teammates to maintain coherence and create automation workflows.',
+			'Fine-tuned models by creating an evaluation pipeline for prompts.',
+			'Guided juniors on maintaining coding standards and enforcing architectural best practices in the era of AI.'
 		],
 	},
 	{
